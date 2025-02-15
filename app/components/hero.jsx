@@ -14,10 +14,10 @@ const Hero = () => {
                         <span className="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">New</span> <span className="text-sm font-medium">Explore Our Services</span>
                         <svg className="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
                     </Link>
-                    {/* Capturing Moments, Creating Memories |   */}
+                    {/* Capturing Moments, Creating Memories | Javed Studio offers professional photography and videography services for weddings, events, corporate shoots, and more.  */}
                     <h2 className="mb-4 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl dark:text-white">ARE YOU LOOKING FOR BEST WEDDING PHOTOGRAPHERS IN PAKISTAN?</h2>
                     <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">YOU'VE MADE A RIGHT CHOICE!</h1>
-                    <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Javed Studio offers professional photography and videography services for weddings, events, corporate shoots, and more.
+                    <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
                         We turn your special moments into timeless memories with high-quality visuals and creative storytelling.</p>
                     <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                         <Link href="#" className="text-gray dark:text-white inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
