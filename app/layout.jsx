@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Javed Studio",
   description: "Photography & Vediography",
+  icons:{
+    icon:"https://github.com/sajida-dev/javedstudio/raw/master/app/logo.png"
+  }
 };
 
 export default function RootLayout({ children }) {
