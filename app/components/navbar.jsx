@@ -5,6 +5,24 @@ import Link from "next/link";
 
 const Navbar = ({ title, button }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isScrollingUp, setIsScrollingUp] = useState(false);
+    let lastScrollY = 0;
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY < lastScrollY) {
+                setIsScrollingUp(true);
+            } else {
+                setIsScrollingUp(false);
+            }
+            lastScrollY = window.scrollY;
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     const handleOutsideClick = (event) => {
         if (!event.target.closest(".mobile-menu") && !event.target.closest(".menu-button")) {
@@ -21,13 +39,12 @@ const Navbar = ({ title, button }) => {
 
     return (
         <>
-            <nav className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600 fixed w-full z-20 top-0 start-0">
+            <nav className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 ${isScrollingUp ? "bg-transparent" : "backdrop-blur-lg bg-white/30 dark:bg-gray-900/30" }`}>
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
                     <Link href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src="https://github.com/sajida-dev/javedstudio/raw/master/app/logo.png" className="h-10" alt="Logo" />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">{title}</span>
                     </Link>
-
                     <div className="hidden md:flex md:items-center md:space-x-8">
                         <ul className="flex space-x-6 text-gray-900 dark:text-white">
                             <li><Link href="/" className="hover:text-blue-700 dark:hover:text-blue-500">Home</Link></li>
@@ -66,7 +83,7 @@ const Navbar = ({ title, button }) => {
                     </div>
                 )}
             </nav>
-            <div className="pt-16"></div>
+            {/* <div className="pt-16"></div> */}
         </>
     );
 };
