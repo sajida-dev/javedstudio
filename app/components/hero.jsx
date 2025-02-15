@@ -25,7 +25,7 @@ const Hero = () => {
                         <img src="https://readymadeui.com/google-logo.svg" className="w-28 mx-auto" alt="google-logo" />
                         <img src="https://readymadeui.com/facebook-logo.svg" className="w-28 mx-auto" alt="facebook-logo" />
                         <img src="https://readymadeui.com/linkedin-logo.svg" className="w-28 mx-auto" alt="linkedin-logo" />
-                        <img src="images/youtube-logo.jpg" className="w-28 mx-auto" alt="youtube-logo" />
+                        <img src="https://github.com/sajida-dev/javedstudio/raw/master/app/images/youtube-logo.jpg" className="w-28 mx-auto" alt="youtube-logo" />
                     </div>
                 </div>
             </section>
