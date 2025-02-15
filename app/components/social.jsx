@@ -15,7 +15,7 @@ const SocialIcons = () => {
       <Link href="https://www.linkedin.com/in/muhammed-ahmed-865807317/" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faLinkedin} className="text-blue-500 hover:text-blue-700 transition duration-300" />
       </Link>
-      <Link href="https://www.youtube.com/channel/UCQl2fpUV6Eq0Wv2OgkEQ_AA" target="_blank" rel="noopener noreferrer">
+      <Link href="https://www.youtube.com/@javed4kstudio691" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faYoutube} className="text-red-600 hover:text-red-800 transition duration-300" />
       </Link>
     </div>
