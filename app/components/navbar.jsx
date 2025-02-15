@@ -4,8 +4,8 @@ import React from "react";
 const Navbar = ({title,button}) => {
     return (
         <>
-        {/*  dark:bg-gray-900  dark:border-gray-600  */}
-            <nav className="bg-white  border-b border-gray-200  fixed w-full z-20 top-0 start-0  ">
+        {/*  |   |    */}
+            <nav className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600 fixed w-full z-20 top-0 start-0  ">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     {/* Logo & Title */}
                     <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -20,8 +20,7 @@ const Navbar = ({title,button}) => {
                     </a>
 
                     <div className="hidden md:flex md:items-center md:space-x-8">
-                        {/* dark:text-white */}
-                        <ul className="flex space-x-6 text-gray-900 ">
+                        <ul className="flex space-x-6 text-gray-900 dark:text-white">
                             <li>
                                 <a href="#" className=" hover:text-blue-700 dark:hover:text-blue-500">
                                     Home
