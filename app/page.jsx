@@ -1,18 +1,12 @@
-import Image from "next/image";
-import Navbar from "./components/nav";
-import Footer from "./components/footer";
-import Hero from "./components/hero";
+import Home from "./home";
 
 
 
-export default async function Home() {
-  const title = "Javed Studio";
-  const year = new Date().getFullYear();
+export default async function Index() {
+  
   return (
     <>
-      <Navbar title={title} button="Book Now" />
-      <Hero />
-      <Footer title={title} year={year}/>
+      <Home />
     </>
   );
 }

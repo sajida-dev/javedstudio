@@ -22,22 +22,22 @@ const Navbar = ({title,button}) => {
                     <div className="hidden md:flex md:items-center md:space-x-8">
                         <ul className="flex space-x-6 text-gray-900 dark:text-white">
                             <li>
-                                <a href="#" className=" hover:text-blue-700 dark:hover:text-blue-500">
+                                <a href="/" className=" hover:text-blue-700 dark:hover:text-blue-500">
                                     Home
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="hover:text-blue-700 dark:hover:text-blue-500">
+                                <a href="/about" className="hover:text-blue-700 dark:hover:text-blue-500">
                                     About
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="hover:text-blue-700 dark:hover:text-blue-500">
+                                <a href="/services" className="hover:text-blue-700 dark:hover:text-blue-500">
                                     Services
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="hover:text-blue-700 dark:hover:text-blue-500">
+                                <a href="/contact" className="hover:text-blue-700 dark:hover:text-blue-500">
                                     Contact
                                 </a>
                             </li>

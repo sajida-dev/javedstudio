@@ -22,10 +22,10 @@ const Hero = () => {
                         </a>
                     </div>
                     <div className="max-w-2xl max-md:max-w-md mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 items-center mt-6">
-                        <img src="https://github.com/sajida-dev/javedstudio/raw/master/app/images/insta-logo.png" className="w-28 mx-auto" alt="google-logo" />
-                        <img src="https://readymadeui.com/facebook-logo.svg" className="w-28 mx-auto" alt="facebook-logo" />
-                        <img src="https://github.com/sajida-dev/javedstudio/raw/master/app/images/LinkedIn-Logo.png" className="w-28 mx-auto" alt="linkedin-logo" />
-                        <img src="https://github.com/sajida-dev/javedstudio/raw/master/app/images/youtube-logo.png" className="w-28 mx-auto" alt="youtube-logo" />
+                        <a href="https://www.instagram.com/javedstudio751/"><img src="https://github.com/sajida-dev/javedstudio/raw/master/app/images/insta-logo.png" className="w-28 mx-auto" alt="google-logo" /></a>
+                        <a href="https://www.facebook.com/profile.php?id=61564252206804&mibextid=ZbWKwL"><img src="https://readymadeui.com/facebook-logo.svg" className="w-28 mx-auto" alt="facebook-logo" /></a>
+                        <a href="https://www.linkedin.com/in/muhammed-ahmed-865807317/"><img src="https://github.com/sajida-dev/javedstudio/raw/master/app/images/LinkedIn-Logo.png" className="w-28 mx-auto" alt="linkedin-logo" /></a>
+                        <a href="https://www.youtube.com/channel/UCQl2fpUV6Eq0Wv2OgkEQ_AA"><img src="https://github.com/sajida-dev/javedstudio/raw/master/app/images/youtube-logo.png" className="w-28 mx-auto" alt="youtube-logo" /></a>
                     </div>
                 </div>
             </section>
