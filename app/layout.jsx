@@ -1,5 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Audiowide } from "next/font/google";
 import "./globals.css";
+
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
@@ -13,12 +14,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const audiowide = Audiowide({
+  variable: "--font-audiowide",
+  subsets: ['latin'],
+  weight: '400',
+});
+
 export const metadata = {
   title: "Javed Studio",
   description: "Photography & Vediography",
-  icons:{
-    icon:"https://github.com/sajida-dev/javedstudio/raw/master/app/logo.png"
-  }
+  icons: {
+    icon: "https://github.com/sajida-dev/javedstudio/raw/master/app/logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -27,7 +34,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        // ${geistSans.variable} ${geistMono.variable} 
+        className={` ${audiowide.variable}  antialiased`}
       >
         <Navbar title={title} button="Book Now" />
         {children}

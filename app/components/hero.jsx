@@ -6,7 +6,7 @@ const Hero = () => {
         <>
             <section
                 className="relative bg-cover bg-center bg-no-repeat pt-20 pb-20"
-                style={{ backgroundImage: "url('https://lh3.googleusercontent.com/sRJHIJ3vyuxxGiR_OvrjAGEeN0couL9LisyGrowh2-90bUh9XFG0xp1K026bg2y2h8ohE6FU8L4sYwy0DSNSjxI=w16383')" }}
+                style={{ backgroundImage: "url('/assets/hero.jpg')" }}
             >
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
                 <div className="relative py-12 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
