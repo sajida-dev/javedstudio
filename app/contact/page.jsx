@@ -1,8 +1,11 @@
 import React from 'react'
+import SplitText from '../components/split-text'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+      <SplitText text="CONTACT US" />
+    </>
   )
 }
 

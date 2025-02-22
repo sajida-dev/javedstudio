@@ -1,0 +1,420 @@
+:root {
+  --icon-dimensions: 4rem;
+  --full-w: 100%;
+  --full-h: 100%;
+  --default-font: -apple-system, BlinkMacSystemFont, Roboto, helvetica neue,
+    sans-serif;
+  --spartan: "LeagueSpartanVariable";
+  --h1-clamp: clamp(3.5rem, 12vw, 12rem);
+  --default-font-size: 0.75rem;
+  --duration: 350ms;
+  --gap: 0.2rem;
+  --default-padding: 0.5rem;
+  --z-20: 20;
+  --z-30: 30;
+  --black: rgb(12, 12, 10);
+  --white: rgb(255, 255, 255);
+  --pale-blue: #c1dcee;
+  --blue: #389dd6;
+  --dark-blue: #064f99;
+  --light-blue: #68b0de;
+  --bg-1: url("https://assets.codepen.io/1149983/alberto-restifo-cFplR9ZGnAk-unsplash+%281%29.jpg");
+  --bg-2: url("https://assets.codepen.io/1149983/gaetan-meyer-WemqIKiduMo-unsplash+%281%29+%281%29.jpg");
+}
+
+@font-face {
+  font-family: "LeagueSpartanVariable";
+  src: url("https://assets.codepen.io/1149983/LeagueSpartan-VF.woff2") format("woff2-variations");
+  font-weight: 200 900;
+}
+
+::selection {
+  -webkit-background-clip: text;
+  -webkit-box-direction: clone;
+  -webkit-text-fill-color: var(--yellow);
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+}
+
+.html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--black);
+  font-family: var(--spartan), var(--default-font);
+  font-size: 62.5%;
+  height: -webkit-fill-available;
+  text-rendering: optimizelegibility;
+  text-transform: uppercase;
+  
+}
+
+.img {
+  max-width: var(--full-w);
+  display: block;
+}
+
+.ul {
+  gap: var(--default-padding);
+}
+
+.h1 {
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  background-image: var(--bg-2);
+  background-position: center 75%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline;
+  font-size: var(--h1-clamp);
+  font-variation-settings: "wght" 900;
+  order: 2;
+  overflow: hidden;
+  user-select: none;
+}
+
+.h1,
+.h2 {
+  margin: 0 auto;
+}
+
+.h1+.h2 {
+  border-bottom: var(--gap) solid var(--pale-blue);
+  order: 3;
+}
+
+.h2 {
+  align-items: center;
+  display: grid;
+  font-size: calc(var(--default-font-size) * 0.25);
+  font-variation-settings: "wght" 750;
+  grid-gap: calc(var(--default-padding) * 1.25);
+  grid-template-columns: calc(var(--default-padding) * 2) auto calc(var(--default-padding) * 2);
+  order: 1;
+  width: fit-content;
+}
+
+.h2::before,
+.h2::after {
+  content: "";
+  border-top: var(--gap) solid var(--pale-blue);
+}
+
+.h2,
+.h3 {
+  color: var(--white);
+  position: relative;
+}
+
+.h3 {
+  align-items: baseline;
+  display: flex;
+  font-size: calc(var(--default-font-size) * 1.25);
+  font-variation-settings: "wght" 600;
+  padding: calc(var(--default-padding) / 2);
+  z-index: 2;
+}
+
+.svg {
+  fill: var(--white);
+  mix-blend-mode: exclusion;
+  width: var(--icon-dimensions);
+}
+
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  display: grid;
+  grid-template-areas: "nav" "main";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem calc(100vh - 5rem);
+  min-height: 350vh;
+  min-height: -webkit-fill-available;
+  overflow: hidden;
+  position: relative;
+  padding: 0 0 6.5% 0;
+}
+
+.container::before {
+  background-image: var(--bg-1);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  height: var(--full-h);
+  filter: brightness(0.25);
+  position: absolute;
+  inset: 0;
+  width: var(--full-w);
+}
+
+
+.cta {
+  padding: var(--gap);
+  transition: color 0.3s ease-in-out;
+  width: max-content;
+}
+
+.cta::before {
+  background-color: var(--dark-blue);
+  border-radius: 1.5rem;
+  content: "";
+  display: block;
+  height: 3rem;
+  left: 0;
+  position: absolute;
+  transition: all 0.3s ease;
+  width: 3rem;
+}
+
+.cta:hover,
+.cta:focus {
+  color: var(--white);
+  width: max-content;
+  height: max-content;
+}
+
+.cta:hover::before,
+.cta:focus::before {
+  color: var(--white);
+  width: var(--full-w);
+}
+
+.cta:active {
+  transform: scale(1);
+}
+
+.cta span,
+.cta .svg {
+  z-index: var(--z-20);
+}
+
+.cta span {
+  align-items: center;
+  display: flex;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.cta .svg {
+  padding: var(--gap);
+}
+
+.glass {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(var(--default-padding));
+}
+
+.main,
+.section {
+  width: var(--full-w);
+  height: var(--full-h);
+}
+
+
+/* 
+nav .ul:nth-of-type(2) {
+  justify-content: center;
+}
+
+nav .ul:nth-of-type(2) li a {
+  border-bottom: var(--gap) solid transparent;
+}
+
+nav .ul:nth-of-type(2) li:hover:not(:hover),
+nav .ul:nth-of-type(2) li:focus:not(:hover) {
+  opacity: 0.33;
+} */
+/* 
+nav .ul:nth-of-type(2) li:hover a,
+nav .ul:nth-of-type(2) li:focus a {
+  border-bottom-color: var(--light-blue);
+} */
+
+.main {
+  grid-area: main;
+  z-index: var(--z-30);
+}
+
+.section {
+  display: flex;
+  flex-flow: column nowrap;
+  height: var(--full-h);
+}
+
+.headings {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: calc(var(--default-padding) * 0.25);
+  margin: 0 0;
+}
+
+.banner {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.banner .banner-wrapper {
+  align-items: baseline;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column: 1;
+  grid-template-columns: repeat(auto-fill, minmax(min(12.5rem, 100%), 1fr));
+}
+
+.banner .banner-wrapper .box {
+  align-items: center;
+  box-shadow: inset var(--gap) 0 0 0 var(--dark-blue);
+  display: flex;
+  flex-flow: column wrap;
+  padding: var(--default-padding) calc(var(--default-padding) / 2);
+  transition: fill var(--duration) ease-in-out;
+}
+
+.banner .banner-wrapper .box:nth-of-type(2) {
+  box-shadow: inset var(--gap) 0 0 0 var(--blue);
+}
+
+.banner .banner-wrapper .box:nth-of-type(3) {
+  box-shadow: inset var(--gap) 0 0 0 var(--light-blue);
+}
+
+.banner .banner-wrapper .box:hover .svg,
+.banner .banner-wrapper .box:focus .svg {
+  fill: var(--pale-blue);
+}
+
+.banner .banner-wrapper p {
+  color: var(--white);
+  font-size: calc(var(--default-font-size) * 1.25);
+  font-variation-settings: "wght" 700;
+}
+
+.banner .banner-wrapper .svg {
+  mix-blend-mode: exclusion;
+}
+
+.mountain-list {
+  margin-top: 7%;
+  box-shadow: inset 0 var(--gap) 0 0 var(--white);
+  display: flex;
+  flex-flow: column wrap;
+  mix-blend-mode: overlay;
+  padding: var(--default-padding) var(--default-padding) 0 var(--default-padding);
+}
+
+.mountain-list .ul {
+  display: grid;
+  gap: var(--gap);
+  grid-auto-flow: column;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  place-items: center;
+  scroll-snap-type: x mandatory;
+  width: 100vw;
+}
+
+.mountain-list .li {
+  aspect-ratio: 16/9;
+  padding: 0 calc(var(--default-padding) / 2);
+  scroll-snap-align: center;
+}
+
+.mountain-list .li:hover .img,
+.mountain-list .li:focus .img {
+  filter: grayscale(0);
+}
+
+.mountain-list .img {
+  border-radius: 1rem;
+  filter: grayscale(1);
+  height: 10rem;
+  max-width: none;
+  object-fit: contain;
+}
+
+@media only screen and (min-width: 760px) {
+  .container {
+    overflow: hidden;
+  }
+
+  .h1 {
+    filter: drop-shadow(calc(-1 * var(--default-padding)) var(--default-padding) calc(var(--default-padding) * 2) var(--black));
+  }
+
+  .h2 {
+    font-size: calc(var(--default-font-size) * 1.75);
+    grid-template-columns: minmax(6rem, 1fr) auto minmax(6rem, 1fr);
+    letter-spacing: calc(var(--default-padding) / 1.5);
+  }
+
+  .h2:nth-of-type(2) {
+    transform: translatey(-1.75rem);
+  }
+
+  /* nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+  } */
+
+  /* nav .ul:not(:nth-of-type(1)) {
+    display: flex;
+  }
+
+  nav .ul:nth-of-type(1) li:nth-of-type(2) {
+    display: none;
+  } */
+
+  /* nav .li {
+    height: var(--full-h);
+  }
+
+  nav .li a {
+    height: var(--full-h);
+  } */
+
+  .headings {
+    margin: auto;
+    row-gap: 0;
+  }
+
+  .banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner .banner-wrapper {
+    align-items: flex-end;
+    grid-template-columns: repeat(3, minmax(12rem, max-content));
+  }
+
+  .mountain-list {
+    margin-left: auto;
+  }
+
+  .mountain-list .ul {
+    max-width: 48rem;
+  }
+
+  .mountain-list .img {
+    height: 15rem;
+    overflow: hidden;
+  }
+
+  .mountain-lines {
+    opacity: 0.33;
+  }
+}
+
+/* ----------------------------------------------
+  Disable Animation if that is user settings
+* ---------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

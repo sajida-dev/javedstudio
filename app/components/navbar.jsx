@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import AnimatedBorderTrail from "./animated-border-trail";
 
 const Navbar = ({ title, button }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -39,7 +40,7 @@ const Navbar = ({ title, button }) => {
 
     return (
         <>
-            <nav className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 ${isScrollingUp ? "bg-transparent" : "backdrop-blur-lg bg-white/30 dark:bg-gray-900/30" }`}>
+            <nav className={`fixed w-full z-50 top-0 start-0 transition-all duration-300 ${isScrollingUp ? "bg-transparent" : "backdrop-blur-lg bg-white/30 dark:bg-gray-900/30"}`}>
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
                     <Link href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src="https://github.com/sajida-dev/javedstudio/raw/master/app/logo.png" className="h-10" alt="Logo" />
@@ -47,12 +48,12 @@ const Navbar = ({ title, button }) => {
                     </Link>
                     <div className="hidden md:flex md:items-center md:space-x-8">
                         <ul className="flex space-x-6 text-gray-900 dark:text-white">
-                            <li><Link href="/" className="hover:text-blue-700 dark:hover:text-blue-500">Home</Link></li>
-                            <li><Link href="/about" className="hover:text-blue-700 dark:hover:text-blue-500">About</Link></li>
-                            <li><Link href="/services" className="hover:text-blue-700 dark:hover:text-blue-500">Services</Link></li>
-                            <li><Link href="/contact" className="hover:text-blue-700 dark:hover:text-blue-500">Contact</Link></li>
+                            <li><Link href="/" className="hover:text-orange-700 dark:hover:text-orange-500">Home</Link></li>
+                            <li><Link href="/about" className="hover:text-orange-700 dark:hover:text-orange-500">About</Link></li>
+                            <li><Link href="/services" className="hover:text-orange-700 dark:hover:text-orange-500">Services</Link></li>
+                            <li><Link href="/contact" className="hover:text-orange-700 dark:hover:text-orange-500">Contact</Link></li>
                         </ul>
-                        <button className="ml-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{button}</button>
+                        <button className="ml-4 text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">{button}</button>
                     </div>
 
                     <button
@@ -77,13 +78,12 @@ const Navbar = ({ title, button }) => {
                             <li><Link href="/services" className="block py-2 px-3 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" onClick={() => setIsMobileMenuOpen(false)}>Services</Link></li>
                             <li><Link href="/contact" className="block py-2 px-3 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link></li>
                             <li>
-                                <button className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{button}</button>
+                                <button className="w-full text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">{button}</button>
                             </li>
                         </ul>
                     </div>
                 )}
             </nav>
-            {/* <div className="pt-16"></div> */}
         </>
     );
 };

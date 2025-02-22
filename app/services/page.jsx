@@ -1,8 +1,11 @@
 import React from 'react'
+import ProductFeatures from '../components/product-feature'
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <>
+      <ProductFeatures />
+    </>
   )
 }
 
