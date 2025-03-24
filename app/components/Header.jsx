@@ -39,22 +39,60 @@ const Header = ({ logo, menu }) => {
 
                 {/* Desktop Menu */}
                 <ul className="hidden lg:flex lg:items-center lg:space-x-6">
-                    {menu?.map(({ label, href }) => (
-                        <li key={href} className="mx-4">
+                    {menu?.map(({ label, href, submenu }) => (
+                        // <li key={href} className="mx-4">
 
-                            <Link
-                                href={href}
-                                className={`text-sm font-semibold ${active === href
-                                    ? "text-blue-600"
-                                    : "text-gray-600 hover:text-gray-700"
-                                    }`}
-                                onClick={() => setActive(href)}
-                            >
-                                {label}
-                            </Link>
+                        //     <Link
+                        //         href={href}
+                        //         className={`text-sm font-semibold ${active === href
+                        //             ? "text-blue-600"
+                        //             : "text-gray-600 hover:text-gray-700"
+                        //             }`}
+                        //         onClick={() => setActive(href)}
+                        //     >
+                        //         {label}
+                        //     </Link>
+                        // </li>
+
+                        <li key={href} className="relative group">
+                            {submenu ? (
+                                <>
+                                    <button
+                                        className={`text-sm font-semibold ${active === href
+                                            ? "text-blue-600 border-b-2 border-blue-600"
+                                            : "text-gray-600 hover:text-gray-700"
+                                            } flex items-center`}
+                                        onClick={() => setActive(href)}
+                                    >
+                                        {label}
+                                        <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    {/* Desktop Dropdown Menu */}
+                                    <ul className="absolute left-0 mt-2 w-48 bg-white  rounded-md shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        {submenu.map(({ label, href }) => (
+                                            <li key={href}>
+                                                <Link href={href} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                                    {label}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </>
+                            ) : (
+                                <Link
+                                    href={href}
+                                    className={`text-sm font-semibold ${active === href
+                                        ? "text-blue-600 border-b-2 border-blue-600"
+                                        : "text-gray-600 hover:text-gray-700"
+                                        }`}
+                                    onClick={() => setActive(href)}
+                                >
+                                    {label}
+                                </Link>
+                            )}
                         </li>
-
-
                     ))}
                 </ul>
 

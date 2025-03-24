@@ -41,19 +41,7 @@ const Header = ({ logo, menu }) => {
                 {/* Desktop Menu */}
                 <ul className="hidden lg:flex lg:items-center lg:space-x-6">
                     {menu?.map(({ label, href, submenu }) => (
-                        // <li key={href} className="mx-4">
 
-                        //     <Link
-                        //         href={href}
-                        //         className={`text-sm font-semibold ${active === href
-                        //             ? "text-blue-600"
-                        //             : "text-gray-600 hover:text-gray-700"
-                        //             }`}
-                        //         onClick={() => setActive(href)}
-                        //     >
-                        //         {label}
-                        //     </Link>
-                        // </li>
                         <li key={href} className="relative group">
                             {submenu ? (
                                 <>
@@ -99,17 +87,14 @@ const Header = ({ logo, menu }) => {
 
                 {/* Auth Buttons */}
                 <div className="hidden lg:flex space-x-3">
-                    <Link href="/sign-in" className="py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200">
-                        Sign In
-                    </Link>
-                    <Link href="/sign-up" className="py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200">
-                        Sign Up
+                    <Link href="/book now" className="py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200">
+                        Book Now
                     </Link>
                 </div>
             </nav>
 
             {/* Mobile Menu */}
-            <div className={`fixed inset-0 z-50 bg-gray-800 bg-opacity-25 ${menuOpen ? "block" : "hidden"}`} onClick={() => setMenuOpen(false)}>
+            <div className={`fixed inset-0 z-50 bg-gray-100 bg-opacity-10 ${menuOpen ? "block" : "hidden"}`} onClick={() => setMenuOpen(false)}>
                 <nav className="fixed top-0 left-0 bottom-0 w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
                     <div className="flex items-center mb-8">
                         <Link href="/" className="mr-auto text-3xl font-bold leading-none">
@@ -126,21 +111,89 @@ const Header = ({ logo, menu }) => {
 
                     {/* Mobile Menu Links */}
                     <ul>
-                        {menu?.map(({ label, href }) => (
+                        {menu?.map(({ label, href, submenu }) => (
+                            // <li key={href} className="mb-1">
+                            //     <Link
+                            //         href={href}
+                            //         className={`block p-4 text-sm font-semibold ${active === href
+                            //             ? "text-blue-600 bg-blue-50 rounded"
+                            //             : "text-gray-400 hover:bg-blue-50 hover:text-blue-600"
+                            //             }`}
+                            //         onClick={() => {
+                            //             setActive(href);
+                            //             setMenuOpen(false);
+                            //         }}
+                            //     >
+                            //         {label}
+                            //     </Link>
+                            // </li>
+                            // <li key={href} className="mb-1">
+                            //     {submenu ? (
+                            //         <div>
+                            //             <button
+                            //                 className="block w-full p-4 text-sm font-semibold text-gray-700 bg-gray-100 rounded"
+                            //                 onClick={() => setSubmenuOpen(submenuOpen === href ? null : href)}
+                            //             >
+                            //                 {label}
+                            //                 <svg className="ml-1 w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            //                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            //                 </svg>
+                            //             </button>
+                            //             {submenuOpen === href && (
+                            //                 <ul className="ml-4 bg-gray-50 rounded">
+                            //                     {submenu.map(({ label, href }) => (
+                            //                         <li key={href}>
+                            //                             <Link href={href} className="block p-2 text-sm text-gray-600 hover:bg-gray-100">
+                            //                                 {label}
+                            //                             </Link>
+                            //                         </li>
+                            //                     ))}
+                            //                 </ul>
+                            //             )}
+                            //         </div>
+                            //     ) : (
+                            //         <Link href={href} className="block p-4 text-sm font-semibold text-gray-700 hover:bg-gray-100">
+                            //             {label}
+                            //         </Link>
+                            //     )}
+                            // </li>
                             <li key={href} className="mb-1">
-                                <Link
-                                    href={href}
-                                    className={`block p-4 text-sm font-semibold ${active === href
-                                        ? "text-blue-600 bg-blue-50 rounded"
-                                        : "text-gray-400 hover:bg-blue-50 hover:text-blue-600"
-                                        }`}
-                                    onClick={() => {
-                                        setActive(href);
-                                        setMenuOpen(false);
-                                    }}
-                                >
-                                    {label}
-                                </Link>
+                                {submenu ? (
+                                    <>
+                                        <button
+                                            className="block w-full p-4 text-sm font-semibold text-gray-700  rounded flex justify-between items-center"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                setSubmenuOpen(submenuOpen === href ? null : href)
+                                            }
+                                            }
+                                        >
+                                            {label}
+                                            <svg
+                                                className={`w-4 h-4 transition-transform ${submenuOpen === href ? "rotate-180" : "rotate-0"
+                                                    }`}
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                        <ul className={`ml-4 bg-gray-50 rounded transition-all duration-300 ${submenuOpen === href ? "block" : "hidden"}`}>
+                                            {submenu.map(({ label, href }) => (
+                                                <li key={href}>
+                                                    <Link href={href} className="block p-2 text-sm text-gray-600 hover:bg-gray-100">
+                                                        {label}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </>
+                                ) : (
+                                    <Link href={href} className="block p-4 text-sm font-semibold text-gray-700 hover:bg-gray-100">
+                                        {label}
+                                    </Link>
+                                )}
                             </li>
                         ))}
                     </ul>
