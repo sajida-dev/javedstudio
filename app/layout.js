@@ -19,19 +19,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const menu = [
-        { label: "Home", href: "/" },
-        { 
-            label: "Services", 
-            href: "/services",
-            submenu: [
-                { label: "Product Photography", href: "/services/product" },
-                { label: "Couple Photography", href: "/services/couple" },
-              { label: "Wedding Photograph", href: "/services/weddings" },
-                { label: "Corporate Photograph", href: "/services/corporate" },
-            ]
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { 
+        label: "Services", 
+        href: "/services",
+        submenu: [
+            { label: "Product Photography", href: "/services/product" },
+            { label: "Couple Photography", href: "/services/couple" },
+          { label: "Wedding Photograph", href: "/services/weddings" },
+            { label: "Corporate Photograph", href: "/services/corporate" },
+        ]
     },
-        { label: "About Us", href: "/about" },
-        { label: "Contact", href: "/contact" }
+    { label: "Contact", href: "/contact" }
     ];
   return (
     <html lang="en">

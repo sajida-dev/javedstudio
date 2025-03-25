@@ -87,7 +87,7 @@ const Header = ({ logo, menu }) => {
 
                 {/* Auth Buttons */}
                 <div className="hidden lg:flex space-x-3">
-                    <Link href="/book now" className="py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200">
+                    <Link href="/book-now" className="py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200">
                         Book Now
                     </Link>
                 </div>
