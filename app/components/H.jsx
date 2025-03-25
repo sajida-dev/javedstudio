@@ -8,15 +8,15 @@ const Header = ({ logo, menu }) => {
     const [active, setActive] = useState();
     const [submenuOpen, setSubmenuOpen] = useState(null);
 
-    useEffect(() => {
-        const handleOutsideClick = (event) => {
-            if (!event.target.closest(".navbar-menu") && menuOpen) {
-                setMenuOpen(false);
-            }
-        };
-        document.addEventListener("click", handleOutsideClick);
-        return () => document.removeEventListener("click", handleOutsideClick);
-    }, [menuOpen]);
+    // useEffect(() => {
+    //     const handleOutsideClick = (event) => {
+    //         if (!event.target.closest(".navbar-menu") && menuOpen) {
+    //             setMenuOpen(false);
+    //         }
+    //     };
+    //     document.addEventListener("click", handleOutsideClick);
+    //     return () => document.removeEventListener("click", handleOutsideClick);
+    // }, [menuOpen]);
 
     return (
         <>
