@@ -20,7 +20,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const menu = [
         { label: "Home", href: "/" },
-        { label: "About Us", href: "/about" },
         { 
             label: "Services", 
             href: "/services",
@@ -30,8 +29,8 @@ export default function RootLayout({ children }) {
               { label: "Wedding Photograph", href: "/services/weddings" },
                 { label: "Corporate Photograph", href: "/services/corporate" },
             ]
-        },
-        { label: "Pricing", href: "/pricing" },
+    },
+        { label: "About Us", href: "/about" },
         { label: "Contact", href: "/contact" }
     ];
   return (
