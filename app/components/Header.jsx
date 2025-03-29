@@ -118,7 +118,7 @@ const Header = ({ logo, menu }) => {
                                 {submenu ? (
                                     <>
                                         <button
-                                            className="block w-full p-4 text-sm font-semibold text-gray-700  rounded flex justify-between items-center"
+                                            className=" w-full p-4 text-sm font-semibold text-gray-700  rounded flex justify-between items-center"
                                             onClick={(e) => {
                                                 e.stopPropagation();
                                                 setSubmenuOpen(submenuOpen === href ? null : href)
