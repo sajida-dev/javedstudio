@@ -1,6 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+config.autoAddCss = false;
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,8 +43,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header logo={"Javed studio"} menu={menu} themeColor="yellow"/>
+        <Header logo={"Javed Studio"} menu={menu} themeColor="yellow"/>
         {children}
+        <Footer logo={"Javed Studio"} address={"Main Bazar Jauharabad."} />
       </body>
     </html>
   );

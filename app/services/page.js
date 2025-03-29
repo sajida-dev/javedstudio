@@ -1,8 +1,9 @@
 import React from 'react'
+import AnimiCard from '../components/AnimiCard'
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <AnimiCard />
   )
 }
 
