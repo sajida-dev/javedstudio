@@ -1,9 +1,11 @@
 import React from 'react'
+import WhyUs from '../components/WhyUs'
 
 const About = () => {
   return (
-    <div>About us
-    </div>
+    <>
+      <WhyUs />
+    </>
     
   )
 }

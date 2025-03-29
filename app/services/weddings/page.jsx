@@ -1,6 +1,6 @@
 import React from 'react'
 import { weddingGallery } from './GalleryData'
-import Gallery from '@/app/components/G'
+import Gallery from '@/app/components/Gallery'
 
 const Weddings = () => {
     return (

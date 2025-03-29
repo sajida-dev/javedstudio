@@ -3,7 +3,6 @@ import Features from "./components/Features";
 import Gallery from "./components/Gallery";
 import CosmosBackground from "./components/hero";
 import HeroSection from "./components/HeroSection";
-import ImageGallery from "./components/Img";
 
 export default function Home() {
   return (

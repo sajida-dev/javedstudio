@@ -1,37 +1,38 @@
-import React from 'react'
+'use client'
+import React, { useState } from "react";
 
-const Gallery = () => {
+const Gallery = ({ images }) => {
+    const [selectedImage, setSelectedImage] = useState(null);
+
     return (
         <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto relative">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                <div className="space-y-2">
+            <div className="sm:columns-1 md:columns-2 lg:columns-3 gap-2 space-y-2">
+                {images.map((src, index) => (
                     <img
-                        className="w-full h-auto object-cover rounded transition-transform duration-300 scale-100 hover:scale-150 overflow-hidden"
-                        src="https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
-                        alt="Gallery Masonry Image"
+                        key={index}
+                        className="w-full break-inside-avoid rounded cursor-pointer transition-transform duration-300"
+                        src={src}
+                        alt={`Gallery Image ${index + 1}`}
+                        onClick={() => setSelectedImage(src)}
                     />
-                    <img
-                        className="w-full h-auto object-cover rounded hover:"
-                        src="https://images.unsplash.com/photo-1668906093328-99601a1aa584?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Masonry Image" />
-                    <img className="w-full h-auto object-cover rounded hover:" src="https://images.unsplash.com/photo-1567016526105-22da7c13161a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Masonry Image" />
-                </div>
-                <div className="space-y-2">
-                    <img className="w-full h-auto object-cover rounded hover:" src="https://images.unsplash.com/photo-1668584054131-d5721c515211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Masonry Image" />
-                    <img className="w-full h-auto object-cover rounded hover:" src="https://images.unsplash.com/photo-1664574654529-b60630f33fdb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Masonry Image" />
-                </div>
-                <div className="space-y-2">
-                    <img className="w-full h-auto object-cover rounded hover:" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Masonry Image" />
-                    <img className="w-full h-auto object-cover rounded hover:" src="https://images.unsplash.com/photo-1586232702178-f044c5f4d4b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Masonry Image" />
-                    <img className="w-full h-auto object-cover rounded hover:" src="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Masonry Image" />
-                </div>
-                <div className="space-y-2">
-                    <img className="w-full h-auto object-cover rounded hover:" src="https://images.unsplash.com/photo-1668869713519-9bcbb0da7171?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Masonry Image" />
-                    <img className="w-full h-auto object-cover rounded hover:" src="https://images.unsplash.com/photo-1668584054035-f5ba7d426401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Masonry Image" />
-                </div>
+                ))}
             </div>
 
+            {/* Zoomed Image on Click */}
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 flex items-center justify-center bg-gray/70 backdrop-blur-md z-50"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <img
+                        src={selectedImage}
+                        alt="Zoomed Image"
+                        className="max-w-4xl max-h-[90vh] rounded-lg transition-transform duration-300 scale-100 hover:scale-110"
+                    />
+                </div>
+            )}
         </div>
-    )
-}
+    );
+};
 
-export default Gallery
+export default Gallery;

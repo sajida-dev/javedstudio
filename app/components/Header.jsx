@@ -34,7 +34,7 @@ const Header = ({ logo, menu }) => {
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
                     <svg className="block h-4 w-4 fill-current" viewBox="0 0 20 20">
-                        {/* <title>Mobile menu</title> */}
+
                         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
                     </svg>
                 </button>
@@ -86,7 +86,7 @@ const Header = ({ logo, menu }) => {
                     ))}
                 </ul>
 
-                {/* Auth Buttons */}
+                {/* Buttons */}
                 <div className="hidden lg:flex space-x-3">
                     <Link href="/book-now" className="py-2 px-6 bg-amber-500 hover:bg-amber-600 text-sm text-white font-bold rounded-xl transition duration-200">
                         Book Now
@@ -155,7 +155,7 @@ const Header = ({ logo, menu }) => {
                         ))}
                     </ul>
 
-                    {/* Auth Buttons */}
+                    {/*  Buttons */}
                     <div className="mt-auto pt-6">
                         <Link href="/book-now" className="block px-4 py-3 mb-2 text-xs text-center text-white font-semibold bg-amber-600 hover:bg-amber-700 rounded-xl">
                             Book Now

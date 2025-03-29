@@ -12,7 +12,7 @@ const Features = () => {
                         </svg>
                     </div>
                     <h3 className="text-3xl font-bold">Safe</h3>
-                    <p>Our products are secure and private out-of-the-box</p>
+                    <p className='mx-10 md:mx-5 lg:mx-5'>Our products are secure and private out-of-the-box</p>
                 </div>
                 <div className="grid gap-4 justify-items-center text-center md:flex-1">
                     <div className=" rounded-full border-8 border-amber-400 p-4 ">
@@ -21,7 +21,7 @@ const Features = () => {
                         </svg>
                     </div>
                     <h3 className="text-3xl font-bold">Efficient</h3>
-                    <p>Feel good about your wallet and the environment</p>
+                    <p className='mx-10 md:mx-5 lg:mx-5'>Feel good about your wallet and the environment</p>
                 </div>
                 <div className="grid gap-4 justify-items-center text-center md:flex-1">
                     <div className=" rounded-full border-8 border-amber-400 p-4 ">
@@ -32,7 +32,7 @@ const Features = () => {
 
                     </div>
                     <h3 className="text-3xl font-bold">Proven</h3>
-                    <p>Leading the Smart Home world for 10 years</p>
+                    <p className='mx-10 md:mx-5 lg:mx-5'>Leading the Smart Home world for 10 years</p>
                 </div>
             </div>
         </>
