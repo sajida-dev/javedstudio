@@ -3,6 +3,7 @@ import Features from "./components/Features";
 import Gallery from "./components/Gallery";
 import CosmosBackground from "./components/hero";
 import HeroSection from "./components/HeroSection";
+import Team from "./components/T";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <HeroSection />
         <Features />
         <AnimiCard />
-        <Features />
+        <Team />
       </main>
     </>
   );
