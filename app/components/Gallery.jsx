@@ -11,7 +11,7 @@ const Gallery = ({ page, images }) => {
             </div>
             <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto relative">
 
-                <div className="sm:columns-1 md:columns-2 lg:columns-3 gap-2 space-y-2">
+                <div className="sm:columns-1 md:columns-2 lg:columns-3 gap-3 space-y-3">
                     {images.map((src, index) => (
                         <img
                             key={index}
