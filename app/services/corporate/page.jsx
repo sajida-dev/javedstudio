@@ -5,8 +5,7 @@ import { corporateGallery } from './GalleryData'
 const Corporate = () => {
     return (
         <>
-            <div>Corporate Photography</div>
-            <Gallery images={corporateGallery} />
+            <Gallery page={"Corporate Photography"} images={corporateGallery} />
         </>
 
     )

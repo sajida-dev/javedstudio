@@ -4,9 +4,9 @@ import Gallery from '@/app/components/Gallery'
 
 const Couple = () => {
     return (
-        <div>Couple Photography
-            <Gallery images={coupleGallery} />
-        </div>
+        <>
+            <Gallery page={"Couple Photography"} images={coupleGallery} />
+        </>
     )
 }
 

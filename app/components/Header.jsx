@@ -73,8 +73,8 @@ const Header = ({ logo, menu }) => {
                                 <Link
                                     href={href}
                                     className={`text-sm font-semibold ${active === href
-                                        ? "text-amber-600  border-amber-600"
-                                        : "text-gray-600 hover:text-gray-700"
+                                        ? "text-amber-500  border-amber-500"
+                                        : "text-gray-700 hover:text-amber-500"
                                         }`}
                                     onClick={() => setActive(href)}
                                 >
