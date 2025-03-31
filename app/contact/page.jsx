@@ -1,4 +1,5 @@
 import React from 'react'
+import SocialLinks from '../components/G'
 
 const Contact = () => {
   return (
@@ -128,6 +129,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <SocialLinks />
     </>
   )
 }

@@ -33,11 +33,11 @@ export default function RootLayout({ children }) {
         { label: "Baby Photography", href: "/services/baby" },
         { label: "Product Photography", href: "/services/product" },
         { label: "Couple Photography", href: "/services/couple" },
-        { label: "Wedding Photograph", href: "/services/weddings" },
-        { label: "Corporate Photograph", href: "/services/corporate" },
+        { label: "Wedding Photography", href: "/services/weddings" },
+        { label: "Corporate Photography", href: "/services/corporate" },
       ]
     },
-    { label: "Contact", href: "/contact" }
+    { label: "Contact Us", href: "/contact" }
   ];
   return (
     <html lang="en">
