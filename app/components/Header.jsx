@@ -90,7 +90,7 @@ const Header = ({ logo, menu }) => {
 
                 {/* Buttons */}
                 <div className="hidden lg:flex space-x-3">
-                    <Link href="/book-now" className="py-2 px-6 bg-amber-500 hover:bg-amber-600 text-sm text-white font-bold rounded-xl transition duration-200">
+                    <Link href="#book-now" className="py-2 px-6 bg-amber-500 hover:bg-amber-600 text-sm text-white font-bold rounded-xl transition duration-200">
                         Book Now
                     </Link>
                 </div>
@@ -159,7 +159,7 @@ const Header = ({ logo, menu }) => {
 
                     {/*  Buttons */}
                     <div className="mt-auto pt-6">
-                        <Link href="/book-now" className="block px-4 py-3 mb-2 text-xs text-center text-white font-semibold bg-amber-600 hover:bg-amber-700 rounded-xl">
+                        <Link href="#book-now" className="block px-4 py-3 mb-2 text-xs text-center text-white font-semibold bg-amber-600 hover:bg-amber-700 rounded-xl">
                             Book Now
                         </Link>
                     </div>

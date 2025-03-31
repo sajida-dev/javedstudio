@@ -1,5 +1,6 @@
 import React from 'react'
 import SocialLinks from '../components/G'
+import SocialMediaSection from '../components/Social'
 
 const Contact = () => {
   return (
@@ -129,7 +130,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      <SocialLinks />
+      <SocialMediaSection />
     </>
   )
 }

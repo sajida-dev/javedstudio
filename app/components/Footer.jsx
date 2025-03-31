@@ -40,10 +40,10 @@ const Footer = ({ logo, address }) => {
                     <a href="#" className="hover:text-amber-600" aria-label="Twitter">
                         <FontAwesomeIcon icon={faTwitter} className="text-gray-500 hover:text-amber-600 text-xl" />
                     </a>
-                    <a href="#" className="hover:text-amber-600" aria-label="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61564252206804" className="hover:text-amber-600" aria-label="Facebook">
                         <FontAwesomeIcon icon={faFacebook} className="text-gray-500 hover:text-amber-600 text-xl" />
                     </a>
-                    <a href="#" className="hover:text-amber-600" aria-label="Instagram">
+                    <a href="https://www.instagram.com/javedstudio751/" className="hover:text-amber-600" aria-label="Instagram">
                         <FontAwesomeIcon icon={faInstagram} className="text-gray-500 hover:text-amber-600 text-xl" />
                     </a>
                     <a href="#" className="hover:text-amber-600" aria-label="LinkedIn">

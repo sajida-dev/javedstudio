@@ -1,9 +1,10 @@
-import AnimiCard from "./components/AnimiCard";
 import Features from "./components/Features";
-import Gallery from "./components/Gallery";
-import CosmosBackground from "./components/hero";
 import HeroSection from "./components/HeroSection";
+import TeamSection from "./components/T";
 import Team from "./components/Team";
+import Services from "./components/Services";
+import Videography from "./components/Videography";
+import SocialMediaSection from "./components/Social";
 
 export default function Home() {
   return (
@@ -11,8 +12,11 @@ export default function Home() {
       <main>
         <HeroSection />
         <Features />
-        <AnimiCard />
+        <Services />
+        <TeamSection />
         <Team />
+        <Videography />
+        <SocialMediaSection />
       </main>
     </>
   );
