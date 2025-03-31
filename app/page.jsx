@@ -7,7 +7,7 @@ import Videography from "./components/Videography";
 import InfoCards from "./components/InfoCards";
 import BookNow from "./components/BookNow";
 import Testimonials from "./components/testimonials/Testimonials";
-import SocialMediaSection from "./components/SocialIconsList";
+import SocialMediaSection from "./components/social-icons/SocialIconsList";
 
 export default function Home() {
   return (
@@ -17,7 +17,6 @@ export default function Home() {
         <Features />
         <Services />
         <Videography />
-
         <InfoCards />
         <BookNow />
         <Testimonials />

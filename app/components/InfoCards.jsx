@@ -3,7 +3,7 @@ import React from 'react'
 const InfoCards = () => {
     return (
         <>
-            <div className="h-screen sm:my-50 flex justify-center items-center">
+            <div className="h-screen flex justify-center items-center">
                 <section className="grid gap-6 md:grid-cols-3 p-4 md:p-8 max-w-5xl mx-auto w-full ">
                     <div className="p-6 bg-white shadow rounded-2xl ">
                         <dl className="space-y-2">

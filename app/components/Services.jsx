@@ -35,38 +35,38 @@ import Image from "next/image";
 
 const Services = () => {
     return (
-        <>
+        <section className="bg-zinc-50 overflow-hidden py-12">
             {/* Title */}
-            <div className="text-center py-10 bg-zinc-50 font-extrabold text-5xl hover:text-amber-500 duration-500">
+            <div className="text-center py-20 bg-zinc-50 font-extrabold text-5xl hover:text-amber-500 duration-500">
                 <h2>Services</h2>
             </div>
 
-            <section className="bg-zinc-50 overflow-hidden py-12">
+            <div className=" overflow-hidden py-12">
 
                 {/* Services Grid */}
                 <div className="max-w-screen-xl 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {[
                         {
                             href: "/services/couple",
-                            src: "https://images.unsplash.com/photo-1530035415911-95194de4ebcc?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                            src: "/img/slider/1.jpg",
                             alt: "Couple Photography",
                             rotate: "rotate-6",
                         },
                         {
                             href: "/services/weddings",
-                            src: "https://images.unsplash.com/photo-1487180144351-b8472da7d491?q=80&w=2672&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                            src: "/img/slider/2.jpg",
                             alt: "Wedding Photography",
                             rotate: "-rotate-7",
                         },
                         {
                             href: "/services/corporate",
-                            src: "https://images.unsplash.com/photo-1586996292898-71f4036c4e07?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                            src: "/img/slider/1.jpg",
                             alt: "Corporate Photography",
                             rotate: "rotate-6",
                         },
                         {
                             href: "/services/product",
-                            src: "https://images.unsplash.com/photo-1522775417749-29284fb89f43?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                            src: "/img/slider/2.jpg",
                             alt: "Product Photography",
                             rotate: "-rotate-9",
                         },
@@ -87,8 +87,8 @@ const Services = () => {
                         </a>
                     ))}
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     );
 };
 

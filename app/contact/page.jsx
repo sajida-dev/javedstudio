@@ -1,5 +1,5 @@
 import React from 'react'
-import SocialMediaSection from '../components/SocialIconsList'
+import SocialMediaSection from '../components/social-icons/SocialIconsList'
 
 const Contact = () => {
   return (

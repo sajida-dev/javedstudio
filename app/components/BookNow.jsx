@@ -3,7 +3,7 @@ import React from 'react'
 const BookNow = () => {
     return (
         <>
-            <section className='mb-25 sm:my-20' id='book-now'>
+            <section className='my-25' id='book-now'>
                 <div className="!flex h-[90vh] w-full items-center justify-between px-10"><img src="https://bucket.material-tailwind.com/magic-ai/533bce4cae28c0673a41bd6f91cf9d1063c842a2bd80092e2c9b000df480dd7c.jpg" alt="bg-img" className="absolute right-0 ml-auto h-full rounded-bl-[100px] object-cover object-center" />
                     <div className="container mx-auto lg:mt-0 ">
                         <div className="grid grid-cols-12 text-center lg:text-left">
