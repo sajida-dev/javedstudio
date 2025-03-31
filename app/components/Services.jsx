@@ -37,7 +37,7 @@ const Services = () => {
     return (
         <>
             {/* Title */}
-            <div className="text-center my-10 font-extrabold text-5xl hover:text-amber-500 duration-500">
+            <div className="text-center py-10 bg-zinc-50 font-extrabold text-5xl hover:text-amber-500 duration-500">
                 <h2>Services</h2>
             </div>
 

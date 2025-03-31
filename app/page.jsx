@@ -4,7 +4,10 @@ import TeamSection from "./components/T";
 import Team from "./components/Team";
 import Services from "./components/Services";
 import Videography from "./components/Videography";
-import SocialMediaSection from "./components/Social";
+import InfoCards from "./components/InfoCards";
+import BookNow from "./components/BookNow";
+import Testimonials from "./components/testimonials/Testimonials";
+import SocialMediaSection from "./components/SocialIconsList";
 
 export default function Home() {
   return (
@@ -13,9 +16,11 @@ export default function Home() {
         <HeroSection />
         <Features />
         <Services />
-        <TeamSection />
-        <Team />
         <Videography />
+
+        <InfoCards />
+        <BookNow />
+        <Testimonials />
         <SocialMediaSection />
       </main>
     </>

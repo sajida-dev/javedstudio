@@ -7,7 +7,7 @@ const WhyUs = () => {
                 Why Us?
             </div>
             <div className="relative mx-auto max-w-5xl text-center">
-                <h2 className="block w-full bg-gradient-to-b from-white to-amber-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
+                <h2 className="block w-full bg-gradient-to-b from-amber-400 to-amber-600 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
                     Build a Website That Your Customers Love
                 </h2>
                 <p className="mx-auto my-4 w-full max-w-xl bg-transparent text-center font-medium leading-relaxed tracking-wide text-gray-400">

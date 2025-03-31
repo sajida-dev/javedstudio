@@ -27,10 +27,10 @@ const SocialMediaSection = () => {
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`group relative flex items-center justify-start w-[60px] h-[60px] overflow-hidden bg-white rounded-full shadow-lg transition-all duration-300 ease-in-out hover:w-[180px] ${color}`}
+                        className={`group relative flex items-center flex-wrap justify-start w-[60px] h-[60px] overflow-hidden bg-white rounded-full shadow-lg transition-all duration-300 ease-in-out hover:w-[180px] ${color}`}
                     >
-                        <div className="flex items-center justify-center w-[60px] h-[60px] transition-all duration-300 ease-in-out group-hover:rounded-l-full group-hover:rounded-r-none">
-                            <FontAwesomeIcon icon={icon} className="text-black group-hover:text-white text-2xl" />
+                        <div className="flex items-center flex-wrap justify-center w-[60px] h-[60px] transition-all duration-300 ease-in-out group-hover:rounded-l-full group-hover:rounded-r-none">
+                            <FontAwesomeIcon icon={icon} className="text-black group-hover:text-white text-2xl sm:text-sm" />
                         </div>
                         <span className="absolute left-16 opacity-0 transition-all duration-300 group-hover:opacity-100 text-white text-lg font-medium">{name}</span>
                     </a>

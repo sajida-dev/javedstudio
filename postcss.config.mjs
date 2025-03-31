@@ -1,5 +1,6 @@
-import tailwindFontawesome from 'tailwind-fontawesome';
 import tailwindcss from 'tailwindcss';
+import tailwindFontawesome from 'tailwind-fontawesome';
+
 const config = {
   plugins: ["@tailwindcss/postcss"],
   tailwindcss,

@@ -34,8 +34,8 @@ const Footer = ({ logo, address }) => {
             </div>
 
             {/* Social Media Links */}
-            <div className="max-w-screen-lg mx-auto flex justify-center sm:justify-between py-5 px-6">
-                <span className="text-gray-600 text-sm">© {new Date().getFullYear()} {logo}. All rights reserved.</span>
+            <div className="max-w-screen-lg mx-auto flex flex-wrap  justify-center sm:justify-between py-5 px-6">
+                <span className="text-gray-600 text-sm sm:text-xs sm:mb-15">© {new Date().getFullYear()} {logo}. All rights reserved.</span>
                 <div className="flex space-x-4">
                     <a href="#" className="hover:text-amber-600" aria-label="Twitter">
                         <FontAwesomeIcon icon={faTwitter} className="text-gray-500 hover:text-amber-600 text-xl" />

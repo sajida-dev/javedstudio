@@ -2,9 +2,9 @@ import React from 'react'
 
 const Features = () => {
     return (
-        <>
+        <div className='py-10'>
             {/* Title */}
-            <div className="text-center my-10 font-extrabold text-5xl hover:text-amber-500 duration-500">
+            <div className="text-center my-10 font-extrabold  text-5xl hover:text-amber-500 duration-500">
                 <h2>Features</h2>
             </div>
             <div className="container mx-auto my-20 max-w-5xl flex gap-12 flex-wrap items-start justify-center md:justify-between">
@@ -39,7 +39,7 @@ const Features = () => {
                     <p className='mx-10 md:mx-5 lg:mx-5'>Leading the Smart Home world for 10 years</p>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
