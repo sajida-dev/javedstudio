@@ -4,19 +4,25 @@ const teamMembers = [
     {
         name: "Alex Morgan",
         role: "CEO & Founder",
-        image: "/team/alex-morgan.jpg",
+        image: "/team/Javed.jpg",
         bio: "Visionary leader with 15+ years of experience in tech innovation.",
     },
     {
         name: "Sarah Johnson",
         role: "Chief Design Officer",
-        image: "/team/sarah-johnson.jpg",
+        image: "/team/ahmed.jpg",
         bio: "Award-winning designer with a passion for creating beautiful, functional interfaces.",
     },
     {
         name: "Michael Chen",
         role: "CTO",
-        image: "/team/michael-chen.jpg",
+        image: "/team/sultan.jpg",
+        bio: "Tech genius with expertise in AI and machine learning technologies.",
+    }
+    , {
+        name: "Michael Chen",
+        role: "CTO",
+        image: "/team/04.jpg",
         bio: "Tech genius with expertise in AI and machine learning technologies.",
     }
 ];

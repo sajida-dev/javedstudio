@@ -26,24 +26,25 @@ export default function RootLayout({ children }) {
   const menu = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
-    { 
-        label: "Services", 
-        href: "/services",
-        submenu: [
-            { label: "Product Photography", href: "/services/product" },
-            { label: "Couple Photography", href: "/services/couple" },
-          { label: "Wedding Photograph", href: "/services/weddings" },
-            { label: "Corporate Photograph", href: "/services/corporate" },
-        ]
+    {
+      label: "Services",
+      href: "/services",
+      submenu: [
+        { label: "Baby Photography", href: "/services/baby" },
+        { label: "Product Photography", href: "/services/product" },
+        { label: "Couple Photography", href: "/services/couple" },
+        { label: "Wedding Photograph", href: "/services/weddings" },
+        { label: "Corporate Photograph", href: "/services/corporate" },
+      ]
     },
     { label: "Contact", href: "/contact" }
-    ];
+  ];
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header logo={"Javed Studio"} menu={menu} themeColor="yellow"/>
+        <Header logo={"Javed Studio"} menu={menu} themeColor="yellow" />
         {children}
         <Footer logo={"Javed Studio"} address={"Main Bazar Jauharabad."} />
       </body>
