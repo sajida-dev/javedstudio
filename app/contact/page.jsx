@@ -4,7 +4,7 @@ import SocialMediaSection from '../components/social-icons/SocialIconsList'
 const Contact = () => {
   return (
     <>
-      <div className="text-center my-10 font-extrabold text-6xl hover:text-amber-500 duration-500">
+      <div className="text-center lg:my-20 sm:my-15 font-extrabold lg:text-6xl md:text-5xl sm:text-4xl hover:text-amber-500 duration-500">
         <h2>Contact Us</h2>
       </div>
       <section className="mb-32">

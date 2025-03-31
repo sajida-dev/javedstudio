@@ -13,6 +13,7 @@ const Footer = ({ logo, address }) => {
                         src={"/logo.png"}
                         width={100}
                         height={120}
+                        className='mx-auto sm:mx-0'
                     />
                     {/* <h3 className="font-bold text-2xl text-amber-600">{logo}</h3> */}
                     <p className="text-gray-500 text-sm mt-3">

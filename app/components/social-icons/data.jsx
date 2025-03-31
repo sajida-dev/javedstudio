@@ -1,3 +1,4 @@
+import { faFacebookF, faTwitter, faInstagram, faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const socialLinks = [
     { id: 1, icon: faFacebookF, name: 'Facebook', url: 'https://facebook.com', color: 'hover:bg-[#4267B2]' },

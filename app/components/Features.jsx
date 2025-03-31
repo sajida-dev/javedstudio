@@ -4,7 +4,7 @@ const Features = () => {
     return (
         <div className='py-10'>
             {/* Title */}
-            <div className="text-center my-10 font-extrabold  text-5xl hover:text-amber-500 duration-500">
+            <div className="text-center lg:my-20 md:my-15 sm:my-15 font-extrabold  lg:text-6xl md:text-5xl hover:text-amber-500 duration-500">
                 <h2>Features</h2>
             </div>
             <div className="container mx-auto my-20 max-w-5xl flex gap-12 flex-wrap items-start justify-center md:justify-between">

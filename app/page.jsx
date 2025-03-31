@@ -5,9 +5,9 @@ import Team from "./components/Team";
 import Services from "./components/Services";
 import Videography from "./components/Videography";
 import InfoCards from "./components/InfoCards";
-import BookNow from "./components/BookNow";
 import Testimonials from "./components/testimonials/Testimonials";
 import SocialMediaSection from "./components/social-icons/SocialIconsList";
+import HireNow from "./components/HireNow";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
         <Services />
         <Videography />
         <InfoCards />
-        <BookNow />
+        <HireNow />
         <Testimonials />
         <SocialMediaSection />
       </main>

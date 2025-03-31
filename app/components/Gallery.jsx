@@ -6,7 +6,7 @@ const Gallery = ({ page, images }) => {
 
     return (
         <>
-            <div className="text-center my-10 font-extrabold text-6xl hover:text-amber-500 duration-500">
+            <div className=" text-center lg:py-20 sm:py-10 md:py-15 font-extrabold lg:text-6xl md:text-5xl sm:text-4xl hover:text-amber-500 duration-500">
                 <h2>{page}</h2>
             </div>
             <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto relative">
