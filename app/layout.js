@@ -4,9 +4,10 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 
 config.autoAddCss = false;
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsApp";
+import Header from "./components/common/Header";
+import Footer from "./components/common/Footer";
+import WhatsAppButton from "./components/common/WhatsApp";
+import SEO from "./components/common/SEO";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <SEO />
         <Header logo={"Javed Studio"} menu={menu} themeColor="yellow" />
         {children}
         <WhatsAppButton />

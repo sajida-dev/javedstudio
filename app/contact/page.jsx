@@ -1,9 +1,11 @@
 import React from 'react'
 import SocialMediaSection from '../components/social-icons/SocialIconsList'
+import SEO from '../components/common/SEO'
 
 const Contact = () => {
   return (
     <>
+      <SEO title={"Contact Us"} />
       <div className="text-center lg:my-20 sm:my-15 font-extrabold lg:text-6xl md:text-5xl sm:text-4xl hover:text-amber-500 duration-500">
         <h2>Contact Us</h2>
       </div>
