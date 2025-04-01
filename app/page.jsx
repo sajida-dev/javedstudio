@@ -1,6 +1,5 @@
 import Features from "./components/Features";
 import HeroSection from "./components/HeroSection";
-import TeamSection from "./components/T";
 import Team from "./components/Team";
 import Services from "./components/Services";
 import Videography from "./components/Videography";
