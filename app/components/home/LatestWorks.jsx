@@ -33,14 +33,14 @@ export default function LatestWorks() {
         }
     };
 
-    useEffect(() => {
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-        handleResize(); // set initial width
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         setWindowWidth(window.innerWidth);
+    //     };
+    //     handleResize(); // set initial width
+    //     window.addEventListener("resize", handleResize);
+    //     return () => window.removeEventListener("resize", handleResize);
+    // }, []);
 
     return (
         <div className="latestwork py-10">
