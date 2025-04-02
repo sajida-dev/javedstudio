@@ -1,5 +1,6 @@
-'use client'
-import { useState, useEffect } from "react";
+
+'use client';
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -15,32 +16,18 @@ const images = [
 ];
 
 export default function LatestWorks() {
-    const [activeIndex, setActiveIndex] = useState(2); // by default 3rd image is enlarge
-    const [windowWidth, setWindowWidth] = useState(0);
-
-    const leftOffsets = [60, 40, 20, 0, -20, -40, -60, -60];
-    // const containerLeft = leftOffsets[activeIndex] || 0;
-    const containerLeft = windowWidth < 768 ? 0 : leftOffsets[activeIndex] || 0;
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const handleDragEnd = (event, info) => {
-        const threshold = 50;
+        const threshold = 50; // Sensitivity of swipe
         if (info.offset.x < -threshold) {
-            // swipe left: next slide
-            setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+            // Swipe left: Next image (Circular)
+            setActiveIndex((prev) => (prev + 1) % images.length);
         } else if (info.offset.x > threshold) {
-            // swipe right: previous slide
-            setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+            // Swipe right: Previous image (Circular)
+            setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
         }
     };
-
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         setWindowWidth(window.innerWidth);
-    //     };
-    //     handleResize(); // set initial width
-    //     window.addEventListener("resize", handleResize);
-    //     return () => window.removeEventListener("resize", handleResize);
-    // }, []);
 
     return (
         <div className="latestwork py-10">
@@ -51,37 +38,41 @@ export default function LatestWorks() {
                 <hr className="w-24 mx-auto border-[#C48F56] mt-2" />
             </div>
 
-            <div className="container relative w-full h-[90vh] flex items-center overflow-hidden">
+            <div className="container relative w-full h-[90vh] flex items-center justify-center overflow-hidden">
                 <motion.div
                     drag="x"
                     onDragEnd={handleDragEnd}
                     dragConstraints={{ left: 0, right: 0 }}
-                    className="imgContainer absolute flex items-center justify-center transition-all duration-1000"
-                    style={{ left: `${containerLeft}%`, height: "600px", width: "100%" }}
+                    className="relative flex items-center justify-center w-full"
                 >
-                    {images.map((src, index) => (
-                        <div key={index} className="slide_div flex items-center justify-center mx-2">
+                    {images.map((src, index) => {
+                        // Calculate distance from active index for smooth positioning
+                        const offset = (index - activeIndex + images.length) % images.length;
+                        const isActive = offset === 0;
+
+                        return (
                             <motion.div
-                                layout
-                                transition={{ type: "spring", stiffness: 150, damping: 20 }}
-                                className="relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-700"
-                                style={{
-                                    width: activeIndex === index ? 260 : 170,
-                                    height: activeIndex === index ? 400 : 260,
+                                key={index}
+                                className="absolute"
+                                animate={{
+                                    x: offset * 220, // Distance between images
+                                    scale: isActive ? 1 : 0.8,
+                                    opacity: isActive ? 1 : 0.5
                                 }}
+                                transition={{ type: "spring", stiffness: 150, damping: 20 }}
                                 onClick={() => setActiveIndex(index)}
+                                style={{ zIndex: isActive ? 10 : 5 }}
                             >
                                 <Image
                                     src={src}
-                                    alt={`javed studio latest work ${index + 1}`}
-                                    width={activeIndex === index ? 260 : 170}
-                                    height={activeIndex === index ? 400 : 260}
+                                    alt={`Javed Studio latest work ${index + 1}`}
+                                    width={isActive ? 260 : 200}
+                                    height={isActive ? 400 : 300}
                                     className="rounded-2xl object-cover"
                                 />
                             </motion.div>
-
-                        </div>
-                    ))}
+                        );
+                    })}
                 </motion.div>
             </div>
         </div>
