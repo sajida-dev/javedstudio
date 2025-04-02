@@ -1,6 +1,5 @@
-
 'use client';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -16,15 +15,29 @@ const images = [
 ];
 
 export default function LatestWorks() {
-    const [activeIndex, setActiveIndex] = useState(2);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [imageSize, setImageSize] = useState({ active: { width: 400, height: 500 }, inactive: { width: 330, height: 450 }, distance: 270 });
+
+    // Function to update sizes based on screen width
+    useEffect(() => {
+        const updateSizes = () => {
+            if (window.innerWidth < 768) {
+                setImageSize({ active: { width: 250, height: 320 }, inactive: { width: 200, height: 280 }, distance: 180 });
+            } else {
+                setImageSize({ active: { width: 400, height: 500 }, inactive: { width: 330, height: 450 }, distance: 270 });
+            }
+        };
+
+        updateSizes(); // Set initial size
+        window.addEventListener("resize", updateSizes);
+        return () => window.removeEventListener("resize", updateSizes);
+    }, []);
 
     const handleDragEnd = (event, info) => {
         const threshold = 50; // Sensitivity of swipe
         if (info.offset.x < -threshold) {
-            // Swipe left: Next image (Circular)
             setActiveIndex((prev) => (prev + 1) % images.length);
         } else if (info.offset.x > threshold) {
-            // Swipe right: Previous image (Circular)
             setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
         }
     };
@@ -38,7 +51,7 @@ export default function LatestWorks() {
                 <hr className="w-24 mx-auto border-[#C48F56] mt-2" />
             </div>
 
-            <div className="container relative w-full h-[90vh] flex items-center justify-center overflow-hidden">
+            <div className="container relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
                 <motion.div
                     drag="x"
                     onDragEnd={handleDragEnd}
@@ -46,9 +59,9 @@ export default function LatestWorks() {
                     className="relative flex items-center justify-center w-full"
                 >
                     {images.map((src, index) => {
-                        // Calculate distance from active index for smooth positioning
                         let offset = (index - activeIndex + images.length) % images.length;
-                        if (offset > images.length / 2) offset -= images.length;
+                        if (offset > images.length / 2) offset -= images.length; // Fix positioning for left-side images
+
                         const isActive = offset === 0;
 
                         return (
@@ -56,7 +69,7 @@ export default function LatestWorks() {
                                 key={index}
                                 className="absolute"
                                 animate={{
-                                    x: offset * 200, // Distance between images
+                                    x: offset * imageSize.distance, // Adjust distance dynamically
                                     scale: isActive ? 1 : 0.8,
                                     opacity: isActive ? 1 : 0.5
                                 }}
@@ -67,8 +80,8 @@ export default function LatestWorks() {
                                 <Image
                                     src={src}
                                     alt={`Javed Studio latest work ${index + 1}`}
-                                    width={isActive ? 360 : 300}
-                                    height={isActive ? 500 : 400}
+                                    width={isActive ? imageSize.active.width : imageSize.inactive.width}
+                                    height={isActive ? imageSize.active.height : imageSize.inactive.height}
                                     className="rounded-2xl object-cover"
                                 />
                             </motion.div>

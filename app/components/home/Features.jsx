@@ -19,7 +19,13 @@ const Features = () => {
                 {/* Feature 1: Premium Quality */}
                 <div className="text-center flex flex-col items-center">
                     <div className="rounded-full border-8 border-amber-500 p-4  hover:border-white transition duration-500">
-                        <PremiumIcon />
+                        <svg fill="none" strokeWidth={1.5} height="50px" width="50px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M510.228,166.833L412.915,42.98c-1.573-2-3.978-3.169-6.522-3.169H105.606c-2.545,0-4.95,1.169-6.521,3.169L1.772,166.833\\n\\t\\t\\tc-2.435,3.1-2.352,7.485,0.198,10.49l247.706,291.94c1.576,1.858,3.888,2.927,6.324,2.927c2.436,0,4.748-1.07,6.324-2.927\\n\\t\\t\\tl247.706-291.94C512.58,174.318,512.663,169.932,510.228,166.833z M394.573,56.398l-35.771,98.898l-84.771-98.898H394.573z\\n\\t\\t\\t M344.127,163.664H167.872l88.127-102.815L344.127,163.664z M237.968,56.398l-84.77,98.898l-35.773-98.898H237.968z\\n\\t\\t\\t M102.891,64.984l35.694,98.68H25.357L102.891,64.984z M26.207,180.251h118.377l87.96,243.183L26.207,180.251z M255.999,439.514\\n\\t\\t\\tl-93.776-259.263h187.551L255.999,439.514z M279.455,423.433l87.959-243.182h118.377L279.455,423.433z M373.413,163.664\\n\\t\\t\\tl35.693-98.681l77.535,98.681H373.413z" />
+                                </g>
+                            </g>
+                        </svg>
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mt-4">Premium Quality</h3>
                     <p className="text-gray-600 mt-2">
