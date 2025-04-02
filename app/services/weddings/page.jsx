@@ -7,7 +7,10 @@ const Weddings = () => {
     return (
         <>
             <SEO title={"Weddings Photography"} />
-            <Gallery page={"Weddings Photography"} images={weddingGallery} />
+            <Gallery
+                page={"Weddings Photography"}
+                paragraph={"From pre-wedding shoots to your big day, we capture every precious moment with elegance and artistic vision."}
+                images={weddingGallery} />
         </>
     )
 }

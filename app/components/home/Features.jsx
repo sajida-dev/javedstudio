@@ -1,46 +1,74 @@
-import React from 'react'
+import React from 'react';
 
 const Features = () => {
     return (
-        <div className='py-10'>
-            {/* Title */}
-            <div className="text-center lg:my-20 md:my-15 sm:my-15 font-extrabold  lg:text-6xl md:text-5xl hover:text-amber-500 duration-500">
-                <h2>Features</h2>
+        <section className="lg:py-30 py-16 bg-gray-50">
+            {/* SEO Optimized Title */}
+            <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 hover:text-amber-500 transition duration-500">
+                    Our Featueres
+                </h2>
+                <p className="text-lg text-gray-600 mt-4 lg:mx-auto mx-7">
+                    Elevate your moments with our professional photography and videography expertise.
+                </p>
             </div>
-            <div className="container mx-auto my-20 max-w-5xl flex gap-12 flex-wrap items-start justify-center md:justify-between">
-                <div className="grid gap-4 justify-items-center text-center md:flex-1">
-                    <div className=" rounded-full border-8 border-amber-500 p-4 hover:border-white duration-500 hover:text-amber-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-14 h-14">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z">
-                            </path>
+
+            {/* Features Grid */}
+            <div className="container mx-auto px-6 lg:px-12 grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+                {/* Feature 1: Premium Quality */}
+                <div className="text-center flex flex-col items-center">
+                    <div className="rounded-full border-8 border-amber-500 p-4  hover:border-white transition duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-14 h-14 text-gray-900 hover:text-amber-400 duration-300">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
                         </svg>
                     </div>
-                    <h3 className="text-3xl font-bold ">Safe</h3>
-                    <p className='mx-10 md:mx-5 lg:mx-5'>Our products are secure and private out-of-the-box</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mt-4">Premium Quality</h3>
+                    <p className="text-gray-600 mt-2">
+                        Cinematic-grade videography and high-resolution photography for unforgettable memories.
+                    </p>
                 </div>
-                <div className="grid gap-4 justify-items-center text-center md:flex-1">
-                    <div className=" rounded-full border-8 border-amber-500 p-4 hover:border-white duration-500 hover:text-amber-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-14 h-14">
+
+                {/* Feature 2: Fast Delivery */}
+                <div className="text-center flex flex-col items-center">
+                    <div className="rounded-full border-8 border-amber-500 p-4  hover:border-white transition duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-14 h-14 text-gray-900 hover:text-amber-400 duration-300">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                         </svg>
                     </div>
-                    <h3 className="text-3xl font-bold ">Efficient</h3>
-                    <p className='mx-10 md:mx-5 lg:mx-5'>Feel good about your wallet and the environment</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mt-4">Fast Delivery</h3>
+                    <p className="text-gray-600 mt-2">
+                        Get your edited photos & videos delivered promptly without compromising quality.
+                    </p>
                 </div>
-                <div className="grid gap-4 justify-items-center text-center md:flex-1">
-                    <div className=" rounded-full border-8 border-amber-500 p-4 hover:border-white duration-500 hover:text-amber-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-14 h-14">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z">
-                            </path>
-                        </svg>
 
+                {/* Feature 3: Affordable Pricing */}
+                <div className="text-center flex flex-col items-center">
+                    <div className="rounded-full border-8 border-amber-500 p-4  hover:border-white transition duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-14 h-14 text-gray-900 hover:text-amber-400 duration-300">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                        </svg>
                     </div>
-                    <h3 className="text-3xl font-bold ">Proven</h3>
-                    <p className='mx-10 md:mx-5 lg:mx-5'>Leading the Smart Home world for 10 years</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mt-4">Affordable Pricing</h3>
+                    <p className="text-gray-600 mt-2">
+                        Flexible packages for every occasion, making premium photography accessible to all.
+                    </p>
+                </div>
+
+                {/* Feature 4: Secure & Private Storage */}
+                <div className="text-center flex flex-col items-center">
+                    <div className="rounded-full border-8 border-amber-500 p-4  hover:border-white transition duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-14 h-14 text-gray-900 hover:text-amber-400 duration-300">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6-6m0 0l6 6m-6-6v10.5M9 21h6a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0015 4.5H9A2.25 2.25 0 006.75 6.75v12A2.25 2.25 0 009 21z" />
+                        </svg>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mt-4">Secure & Private</h3>
+                    <p className="text-gray-600 mt-2">
+                        Your videos and photos are safely stored, ensuring 100% privacy and security.
+                    </p>
                 </div>
             </div>
-        </div>
-    )
-}
+        </section>
+    );
+};
 
-export default Features
+export default Features;

@@ -1,14 +1,18 @@
 'use client'
 import React, { useState } from "react";
 import Image from "next/image";
-const Gallery = ({ page, images }) => {
+const Gallery = ({ page, paragraph, images }) => {
     const [selectedImage, setSelectedImage] = useState(null);
 
     return (
         <>
-            <div className=" text-center lg:py-20 sm:py-10 md:py-15 font-extrabold lg:text-6xl md:text-5xl sm:text-4xl hover:text-amber-500 duration-500">
+
+            <div className="text-center font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-amber-500 duration-500 py-10 lg:py-20">
                 <h2>{page}</h2>
             </div>
+            <p className="text-center text-lg text-gray-600 max-w-2xl lg:mx-auto mx-5 mt-4">
+                {paragraph}
+            </p>
             <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto relative">
 
                 <div className="sm:columns-1 md:columns-2 lg:columns-3 gap-3 space-y-3">
@@ -17,7 +21,7 @@ const Gallery = ({ page, images }) => {
                             key={index}
                             className="w-full break-inside-avoid rounded cursor-pointer transition-transform duration-300"
                             src={src}
-                            alt={`Gallery Image ${index + 1}`}
+                            alt={`Javed studio weddings photography and videography  ${index + 1}`}
                             onClick={() => setSelectedImage(src)}
                         />
                     ))}

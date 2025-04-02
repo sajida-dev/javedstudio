@@ -1,12 +1,11 @@
 import Features from "./components/home/Features";
 import HeroSection from "./components/home/HeroSection";
-import Team from "./components/about/Team";
 import Services from "./components/services/Services";
 import Videography from "./components/home/Videography";
-import InfoCards from "./components/InfoCards";
 import Testimonials from "./components/testimonials/Testimonials";
 import SocialMediaSection from "./components/social-icons/SocialIconsList";
 import HireNow from "./components/home/HireNow";
+import LatestWorks from "./components/home/LatestWorks";
 
 export default function Home() {
   return (
@@ -16,7 +15,7 @@ export default function Home() {
         <Features />
         <Services />
         <Videography />
-        <InfoCards />
+        <LatestWorks />
         <HireNow />
         <Testimonials />
         <SocialMediaSection />

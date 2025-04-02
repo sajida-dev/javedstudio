@@ -7,7 +7,10 @@ const Couple = () => {
     return (
         <>
             <SEO title={"Couple Photography"} />
-            <Gallery page={"Couple Photography"} images={coupleGallery} />
+            <Gallery
+                page={"Couple Photography"}
+                paragraph={"Capture your love story with breathtaking couple photoshoots, perfect for engagements, anniversaries, and special moments."}
+                images={coupleGallery} />
         </>
     )
 }
