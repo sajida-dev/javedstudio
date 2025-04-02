@@ -16,7 +16,7 @@ const images = [
 ];
 
 export default function LatestWorks() {
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(2);
 
     const handleDragEnd = (event, info) => {
         const threshold = 50; // Sensitivity of swipe
@@ -47,7 +47,8 @@ export default function LatestWorks() {
                 >
                     {images.map((src, index) => {
                         // Calculate distance from active index for smooth positioning
-                        const offset = (index - activeIndex + images.length) % images.length;
+                        let offset = (index - activeIndex + images.length) % images.length;
+                        if (offset > images.length / 2) offset -= images.length;
                         const isActive = offset === 0;
 
                         return (
@@ -55,7 +56,7 @@ export default function LatestWorks() {
                                 key={index}
                                 className="absolute"
                                 animate={{
-                                    x: offset * 220, // Distance between images
+                                    x: offset * 200, // Distance between images
                                     scale: isActive ? 1 : 0.8,
                                     opacity: isActive ? 1 : 0.5
                                 }}
@@ -66,8 +67,8 @@ export default function LatestWorks() {
                                 <Image
                                     src={src}
                                     alt={`Javed Studio latest work ${index + 1}`}
-                                    width={isActive ? 260 : 200}
-                                    height={isActive ? 400 : 300}
+                                    width={isActive ? 360 : 300}
+                                    height={isActive ? 500 : 400}
                                     className="rounded-2xl object-cover"
                                 />
                             </motion.div>

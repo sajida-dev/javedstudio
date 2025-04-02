@@ -1,6 +1,6 @@
 import Features from "./components/home/Features";
 import HeroSection from "./components/home/HeroSection";
-import Services from "./components/services/Services";
+import Services from "./components/home/Services";
 import Videography from "./components/home/Videography";
 import Testimonials from "./components/testimonials/Testimonials";
 import SocialMediaSection from "./components/social-icons/SocialIconsList";

@@ -32,11 +32,11 @@ export default function RootLayout({ children }) {
       label: "Services",
       href: "/services",
       submenu: [
-        { label: "Baby Photography", href: "/services/baby" },
-        { label: "Product Photography", href: "/services/product" },
-        { label: "Couple Photography", href: "/services/couple" },
-        { label: "Wedding Photography", href: "/services/weddings" },
-        { label: "Corporate Photography", href: "/services/corporate" },
+        { label: "Baby Photography", href: "/service/baby" },
+        { label: "Product Photography", href: "/service/product" },
+        { label: "Couple Photography", href: "/service/couple" },
+        { label: "Wedding Photography", href: "/service/weddings" },
+        { label: "Corporate Photography", href: "/service/corporate" },
       ]
     },
     { label: "Contact Us", href: "/contact" }

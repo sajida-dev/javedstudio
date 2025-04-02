@@ -1,5 +1,5 @@
 import React from 'react'
-import AnimiCard from '../components/services/Services'
+import AnimiCard from '../components/home/Services'
 
 const Services = () => {
   return (
