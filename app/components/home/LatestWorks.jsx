@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -16,10 +16,11 @@ const images = [
 
 export default function LatestWorks() {
     const [activeIndex, setActiveIndex] = useState(2); // by default 3rd image is enlarge
+    const [windowWidth, setWindowWidth] = useState(0);
 
-    // Predefined left offsets (in percentages) that mimic your CSS behavior
     const leftOffsets = [60, 40, 20, 0, -20, -40, -60, -60];
-    const containerLeft = leftOffsets[activeIndex] || 0;
+    // const containerLeft = leftOffsets[activeIndex] || 0;
+    const containerLeft = windowWidth < 768 ? 0 : leftOffsets[activeIndex] || 0;
 
     const handleDragEnd = (event, info) => {
         const threshold = 50;
@@ -31,6 +32,15 @@ export default function LatestWorks() {
             setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
         }
     };
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+        handleResize(); // set initial width
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     return (
         <div className="latestwork py-10">
@@ -54,7 +64,7 @@ export default function LatestWorks() {
                             <motion.div
                                 layout
                                 transition={{ type: "spring", stiffness: 150, damping: 20 }}
-                                className="relative overflow-hidden rounded-2xl cursor-pointer"
+                                className="relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-700"
                                 style={{
                                     width: activeIndex === index ? 260 : 170,
                                     height: activeIndex === index ? 400 : 260,
@@ -66,7 +76,7 @@ export default function LatestWorks() {
                                     alt={`javed studio latest work ${index + 1}`}
                                     width={activeIndex === index ? 260 : 170}
                                     height={activeIndex === index ? 400 : 260}
-                                    className="rounded-2xl"
+                                    className="rounded-2xl object-cover"
                                 />
                             </motion.div>
 
