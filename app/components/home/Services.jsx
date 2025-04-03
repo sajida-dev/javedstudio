@@ -1,17 +1,18 @@
 import React from "react";
 import Image from "next/image";
+import Baby from "./Baby";
 
 const Services = () => {
     return (
-        <section className="bg-zinc-50 overflow-hidden py-12">
+        <section className="bg-zinc-100 overflow-hidden py-12">
             {/* Title */}
             <div className="text-center py-20 bg-zinc-50 font-extrabold text-5xl hover:text-amber-500 duration-500">
                 <h2>Services</h2>
             </div>
 
-            <div className=" overflow-hidden py-12">
+            {/* <div className=" overflow-hidden py-12">
 
-                {/* Services Grid */}
+               
                 <div className="max-w-screen-xl 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {[
                         {
@@ -53,7 +54,9 @@ const Services = () => {
                         </a>
                     ))}
                 </div>
-            </div>
+            </div> */}
+
+            <Baby />
         </section>
     );
 };

@@ -1,3 +1,5 @@
+
+
 'use client';
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -24,7 +26,7 @@ export default function LatestWorks() {
             if (window.innerWidth < 768) {
                 setImageSize({ active: { width: 250, height: 320 }, inactive: { width: 200, height: 280 }, distance: 180 });
             } else {
-                setImageSize({ active: { width: 400, height: 500 }, inactive: { width: 330, height: 450 }, distance: 270 });
+                setImageSize({ active: { width: 370, height: 500 }, inactive: { width: 330, height: 450 }, distance: 270 });
             }
         };
 
@@ -43,15 +45,15 @@ export default function LatestWorks() {
     };
 
     return (
-        <div className="latestwork py-10">
+        <div className="latestwork py-10 ">
             <div className="text-center mb-6">
                 <h3 className="text-3xl font-bold">
-                    Latest <span className="text-[#C48F56]">Works</span>
+                    Latest <span className="text-amber-400">Works</span>
                 </h3>
-                <hr className="w-24 mx-auto border-[#C48F56] mt-2" />
+                <hr className="w-24 mx-auto border-amber-400 mt-2" />
             </div>
 
-            <div className="container relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
+            <div className="container relative w-full  h-[100vh] flex items-center justify-center overflow-x-hidden">
                 <motion.div
                     drag="x"
                     onDragEnd={handleDragEnd}
@@ -73,7 +75,7 @@ export default function LatestWorks() {
                                     scale: isActive ? 1 : 0.8,
                                     opacity: isActive ? 1 : 0.5
                                 }}
-                                transition={{ type: "spring", stiffness: 150, damping: 20 }}
+                                transition={{ type: "spring", stiffness: 250, damping: 30 }}
                                 onClick={() => setActiveIndex(index)}
                                 style={{ zIndex: isActive ? 10 : 5 }}
                             >
