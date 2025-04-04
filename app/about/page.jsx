@@ -13,14 +13,13 @@ const About = () => {
   return (
     <>
       <SEO title={"About Us"} />
-      {/* <WhyUs /> */}
       <WhyChooseUs />
-      <AboutUs />
       <SeparatingSection />
-      <TeamSection />
       <Aboutt />
+      <TeamSection />
       <InfoCards />
       <ServicesSection />
+      <AboutUs />
     </>
 
   )

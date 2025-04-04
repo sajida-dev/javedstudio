@@ -4,8 +4,8 @@ import { faLightbulb, faCogs, faCamera, faPaintBrush, faBrain } from "@fortaweso
 const reasons = [
     { icon: faLightbulb, title: "Creative Approach", desc: "We bring unique and innovative ideas to every project." },
     { icon: faCogs, title: "Professional Skills", desc: "Expert photographers and videographers with years of experience." },
-    { icon: faCamera, title: "High-Quality Equipment", desc: "We use the best equipment to ensure top-tier results." },
-    { icon: faPaintBrush, title: "Attention to Detail", desc: "We focus on every little detail to make your memories perfect." },
+    { icon: faCamera, title: "High-Quality Result", desc: "We use the best equipment to ensure top-tier results." },
+    // { icon: faPaintBrush, title: "Attention to Detail", desc: "We focus on every little detail to make your memories perfect." },
     { icon: faBrain, title: "Experience", desc: "Over 25+ years of experience in the industry." },
 ];
 
@@ -18,7 +18,7 @@ const WhyChooseUs = () => {
                     {/* <h2 className="block w-full bg-gradient-to-b from-amber-400 to-amber-600 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
                         Build a Website That Your Customers Love
                     </h2> */}
-                    <h2 className="text-3xl my-3  sm:text-4xl font-bold bg-gradient-to-b from-amber-300 to-amber-400 bg-clip-text text-transparent text-opacity-0">
+                    <h2 className="text-3xl my-7 lg:text-4xl font-bold bg-gradient-to-b from-amber-500 to-amber-600 bg-clip-text text-transparent text-opacity-0">
                         Build a Website That Your Customers Love
                     </h2>
 
@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
                         let you get the job done easily.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
                     {reasons.map((reason, index) => (
                         <div key={index} className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg">
                             {/* Icon inside an amber circle */}
