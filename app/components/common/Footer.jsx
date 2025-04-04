@@ -1,7 +1,8 @@
+'use client'
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import Image from 'next/image';
+import { CldImage } from 'next-cloudinary';
 
 const Footer = ({ logo, address }) => {
     return (
@@ -9,8 +10,8 @@ const Footer = ({ logo, address }) => {
             <div className="max-w-screen-lg mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 gap-10 border-b">
                 {/* Logo & About Section */}
                 <div className="text-center sm:text-left">
-                    <Image
-                        src={"/logo.png"}
+                    <CldImage
+                        src={"logo_kydxp2"}
                         width={100}
                         height={120}
                         className='mx-auto sm:mx-0'

@@ -2,24 +2,26 @@
 
 'use client';
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { CldImage } from 'next-cloudinary';
 
 const images = [
-    "/img/latest-work/1.jpg",
-    "/img/latest-work/2.jpg",
-    "/img/latest-work/3.jpg",
-    "/img/latest-work/4.jpg",
-    "/img/latest-work/5.jpg",
-    "/img/latest-work/6.jpg",
-    "/img/latest-work/7.jpg",
-    "/img/latest-work/8.jpg",
+    "14_iznicr",
+    "19_rgjbzg",
+    "13_ajhgxz",
+    "16_dhvrll",
+    "11_fc141n",
+    "15_emxie9",
+    "12_exmgiv",
+    "8_fbnkl1",
+    "10_am1l89",
+    "5_jwnhdr",
+    "1_o3jn6i",
 ];
 
 export default function LatestWorks() {
     const [activeIndex, setActiveIndex] = useState(0);
     const [imageSize, setImageSize] = useState({ active: { width: 400, height: 500 }, inactive: { width: 330, height: 450 }, distance: 270 });
-
     // Function to update sizes based on screen width
     useEffect(() => {
         const updateSizes = () => {
@@ -34,6 +36,7 @@ export default function LatestWorks() {
         window.addEventListener("resize", updateSizes);
         return () => window.removeEventListener("resize", updateSizes);
     }, []);
+
 
     const handleDragEnd = (event, info) => {
         const threshold = 50; // Sensitivity of swipe
@@ -79,7 +82,7 @@ export default function LatestWorks() {
                                 onClick={() => setActiveIndex(index)}
                                 style={{ zIndex: isActive ? 10 : 5 }}
                             >
-                                <Image
+                                <CldImage
                                     src={src}
                                     alt={`Javed Studio latest work ${index + 1}`}
                                     width={isActive ? imageSize.active.width : imageSize.inactive.width}

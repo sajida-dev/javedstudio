@@ -1,5 +1,4 @@
 import React from 'react';
-import PremiumIcon from '../icons/PremiumIcon';
 
 const Features = () => {
     return (

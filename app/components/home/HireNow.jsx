@@ -1,10 +1,13 @@
+'use client'
+import { CldImage } from 'next-cloudinary'
 import React from 'react'
 
 const HireNow = () => {
     return (
         <>
             <section className='my-25' id='book-now'>
-                <div className="!flex h-[90vh] w-full items-center justify-between px-10"><img src="/img/slider/1.jpg" alt="bg-img" className="absolute right-0 ml-auto h-full rounded-bl-[100px] object-cover object-center" />
+                <div className="relative !flex h-[90vh] w-full items-center justify-between px-10">
+                    <CldImage src="1_pbqgjh" fill alt="bg-img" className="absolute inset-0 right-0 ml-auto h-full rounded-bl-[100px] object-cover object-center " />
                     <div className="container mx-auto lg:mt-0 ">
                         <div className="grid grid-cols-12 text-center lg:text-left">
                             <div className="relative flex flex-col bg-clip-border text-gray-700 px-6 py-10 border border-white shadow-lg col-span-full rounded-xl bg-white/90 shadow-black/10 backdrop-blur-sm backdrop-saturate-200 xl:col-span-7">

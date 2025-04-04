@@ -1,138 +1,276 @@
-// import React from 'react'
+// "use client";
 
-// const Baby = () => {
+// import React from 'react';
+// import Image from 'next/image';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {
+//     faTwitter,
+//     faFacebook,
+//     faInstagram,
+//     faLinkedin,
+// } from '@fortawesome/free-brands-svg-icons';
+
+// const PhotographyTemplate = () => {
 //     return (
-//         <>{ /*Hero Section*/}
-//             <section className="py-xl-8 py-6">
-//                 <div className="container py-xl-6">
-//                     <div className="row align-items-center gy-6 gy-xl-0">
-//                         <div className="col-lg-5 col-xxl-5 col-12">
-//                             <div className="d-flex flex-column gap-5">
-//                                 <div className="d-flex flex-row gap-2 align-items-center">
-//                                     <span>🚀</span>
-//                                     <span className="text-primary fw-semibold">
-//                                         <span>Empower Your Learning Journey Today</span>
-//                                     </span>
-//                                 </div>
-//                                 <div className="d-flex flex-column gap-3">
-//                                     <div className="d-flex flex-column gap-2">
-//                                         <h1 className="mb-0 display-2 fw-bolder">The #1 Courses Learning Platform</h1>
-//                                         <p className="mb-0">Hands-on training, and certifications to help you get the most from Geeks Learning.</p>
-//                                     </div>
-//                                     <ul className="list-unstyled mb-0 d-flex flex-column gap-2">
-//                                         <li className="d-flex flex-row gap-2">
-//                                             <span>
-//                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-check-circle-fill text-success" viewBox="0 0 16 16">
-//                                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-//                                                 </svg>
-//                                             </span>
-//                                             <span>Expert Instructors</span>
-//                                         </li>
-//                                         <li className="d-flex flex-row gap-2">
-//                                             <span>
-//                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-check-circle-fill text-success" viewBox="0 0 16 16">
-//                                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-//                                                 </svg>
-//                                             </span>
-//                                             <span>Flexible Learning</span>
-//                                         </li>
-//                                         <li className="d-flex flex-row gap-2">
-//                                             <span>
-//                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-check-circle-fill text-success" viewBox="0 0 16 16">
-//                                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-//                                                 </svg>
-//                                             </span>
-//                                             <span>Supportive Community</span>
-//                                         </li>
-//                                     </ul>
-//                                 </div>
-//                                 <div className="d-grid d-md-flex flex-row gap-2">
-//                                     <a href="#!" className="btn btn-primary btn-lg">Join For Free</a>
-//                                     <a href="#!" className="btn btn-outline-secondary btn-lg">Explore Courses</a>
-//                                 </div>
+//         <div className="min-h-screen bg-black text-white font-sans">
+//             {/* Navigation */}
+//             <nav className="bg-black shadow-xl flex flex-row items-center p-4 w-full">
+//                 {/* Logo & first list */}
+//                 <ul className="flex">
+//                     <li>
+//                         <a href="#" className="flex items-center">
+//                             <svg
+//                                 xmlns="http://www.w3.org/2000/svg"
+//                                 viewBox="0 0 43 13"
+//                                 className="w-24"
+//                             >
+//                                 <g fill="none" fillRule="evenodd">
+//                                     <path
+//                                         d="M1.349 11.509h6.183V1.561H1.349v9.948ZM.097 12.763h8.694V.306H.097v12.457Z"
+//                                         fill="#FDD31E"
+//                                     />
+//                                     <path
+//                                         d="M14.565 5.895h-.538c-.706-.998-1.407-1.989-2.107-3.11h-.005v3.11h-.594V1.559h.538c.706.991 1.406 1.975 2.099 3.09h.013v-3.09h.594v4.336M16.262 1.559l-1.498 4.336h.644l.377-1.184h1.308l.34 1.184h.831l-1.382-4.336h-.62Zm-.284 2.619c.173-.569.346-1.096.501-1.765h.013c.173.669.328 1.196.489 1.765h-1.003ZM18.963 5.895V2.14h-1.14v-.581h3.023v.581h-1.14v3.755h-.743M21.087 5.895h.738V1.559h-.738zM24.117 5.968c1.133 0 1.839-1.009 1.839-2.304 0-1.214-.78-2.18-1.839-2.18s-1.842.966-1.842 2.18c0 1.295.707 2.304 1.842 2.304Zm0-.619c-.776 0-1.048-.855-1.048-1.685 0-.799.31-1.561 1.048-1.561.736 0 1.045.762 1.045 1.561 0 .83-.272 1.685-1.045 1.685ZM29.654 5.895h-.539c-.707-.998-1.407-1.989-2.106-3.11h-.007v3.11h-.593V1.559h.538c.706.991 1.406 1.975 2.098 3.09h.013v-3.09h.596v4.336M31.351 1.559l-1.499 4.336h.645l.377-1.184h1.307l.341 1.184h.83L31.97 1.559h-.619Zm-.285 2.619c.174-.569.346-1.096.502-1.765h.012c.174.669.328 1.196.489 1.765h-1.003ZM33.567 1.559h.739v3.753h1.467v.583h-2.206V1.559M14.108 9.521v1.791c-.397.154-.812.265-1.232.265-1.276 0-2.082-.991-2.082-2.267 0-1.183.806-2.218 2.106-2.218.402 0 .805.15 1.053.335l-.242.515c-.198-.123-.508-.229-.793-.229-.792 0-1.331.626-1.331 1.611 0 1.027.62 1.634 1.257 1.634.198 0 .366-.024.522-.105V9.521h.742M16.766 7.751h-1.24v1.188h1.214v.582h-1.214v1.4h1.462v.583M19.058 11.577c1.133 0 1.839-1.009 1.839-2.304 0-1.214-.781-2.181-1.839-2.181-1.06 0-1.84.967-1.84 2.181 0 1.295.705 2.304 1.84 2.304Zm0-.619c-.775 0-1.048-.854-1.048-1.685 0-.798.31-1.56 1.048-1.56.736 0 1.045.762 1.045 1.56 0 .831-.273 1.685-1.045 1.685ZM24.464 9.521v1.791c-.397.154-.811.265-1.233.265-1.275 0-2.081-.991-2.081-2.267 0-1.183.806-2.218 2.107-2.218.402 0 .804.15 1.052.335l-.242.515c-.198-.123-.506-.229-.792-.229-.794 0-1.332.626-1.332 1.611 0 1.027.62 1.634 1.258 1.634.199 0 .365-.024.52-.105V9.521h.743M27.773 11.504l-.875-1.796c.477-.253.751-.769.751-1.289 0-.843-.516-1.252-1.346-1.252h-1.158v4.337h.745V9.868h.334l.699 1.636h.85ZM25.89 7.751h.328c.438 0 .687.253.687.699 0 .582-.353.842-.706.86-.075.008-.249.014-.309.019V7.751ZM29.283 7.167l-1.499 4.337h.644l.378-1.184h1.308l.338 1.184h.832l-1.382-4.337h-.619Zm-.284 2.621c.172-.571.345-1.097.501-1.766h.013c.173.669.327 1.195.489 1.766h-1.003ZM32.573 9.31c-.077.007-.259.013-.311.018V7.751h.334c.434 0 .682.253.682.699 0 .582-.352.842-.705.86Zm.104-2.143h-1.158v4.337h.743V9.868h.334c.886 0 1.426-.718 1.426-1.449 0-.843-.515-1.252-1.345-1.252ZM37.465 11.504h-.743V9.417h-1.543v2.087h-.736V7.167h.736v1.667h1.543V7.18h.743v4.324M38.177 11.503h.739V7.167h-.739zM42.259 7.955c-.18-.112-.476-.242-.762-.242-.757 0-1.306.626-1.306 1.611 0 1.027.606 1.634 1.325 1.634.285 0 .551-.093.743-.217l.205.539c-.224.155-.62.297-.978.297-1.276 0-2.082-.991-2.082-2.267 0-1.183.798-2.218 2.093-2.218.385 0 .743.163.998.335l-.236.528"
+//                                         fill="#FFFFFE"
+//                                     />
+//                                 </g>
+//                             </svg>
+//                         </a>
+//                     </li>
+//                 </ul>
+//                 {/* Navigation Links */}
+//                 <ul className="flex items-center justify-center gap-4 w-full">
+//                     <li>
+//                         <a href="#" className="hover:text-yellow-500 text-base">
+//                             Magazine
+//                         </a>
+//                     </li>
+//                     <li>
+//                         <a href="#" className="hover:text-yellow-500 text-base">
+//                             TV
+//                         </a>
+//                     </li>
+//                     <li>
+//                         <a href="#" className="hover:text-yellow-500 text-base">
+//                             Podcasts
+//                         </a>
+//                     </li>
+//                     <li>
+//                         <a
+//                             href="#"
+//                             className="cta border border-transparent text-yellow-400 px-4 py-2 relative overflow-hidden hover:border-yellow-500 hover:text-black transition-colors duration-300"
+//                         >
+//                             Subscribe
+//                         </a>
+//                     </li>
+//                 </ul>
+//             </nav>
+
+//             {/* Main Section */}
+//             <section className="flex flex-col flex-wrap overflow-hidden">
+//                 <article className="relative w-full grid grid-cols-1 grid-rows-[100vh]">
+//                     {/* Panels (Photography Services) */}
+//                     <ul className="panels grid grid-cols-1 sm:grid-cols-2 gap-4 z-20">
+//                         {/* Panel 1: Couple Photography */}
+//                         <li className="panel relative overflow-hidden group">
+//                             <a
+//                                 href="#"
+//                                 className="absolute inset-0 flex justify-center items-start pt-8 text-5xl font-bold"
+//                             >
+//                                 Couple Photography
+//                             </a>
+//                             <div className="relative h-full w-full">
+//                                 <Image
+//                                     src="/img/team/1.jpg"
+//                                     alt="Couple Photography"
+//                                     fill
+//                                     style={{ objectFit: "cover" }}
+//                                     className="brightness-50 group-hover:brightness-100 transition duration-500"
+//                                 />
 //                             </div>
-//                         </div>
-//                         <div className="col-xxl-6 offset-xxl-1 col-lg-7 col-12">
-//                             <div className="row gx-0 gy-4 gy-lg-0">
-//                                 <div className="col-md-6 flex-column justify-content-start align-items-center d-none d-md-flex">
-//                                     <div className="position-relative me-n7">
-//                                         <div className="position-absolute bottom-25 start-0 ms-n8 end-0 d-flex flex-column align-items-start">
-//                                             <div className="bg-white rounded-pill py-2 px-3 shadow mb-2 d-inline-block">
-//                                                 <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                                                     <path d="M23.9688 3.0378H8.29689C7.3189 3.0378 6.38097 3.4263 5.68942 4.11784C4.99788 4.80939 4.60938 5.74732 4.60938 6.72531V26.0848C4.60938 26.3293 4.7065 26.5638 4.87939 26.7366C5.05227 26.9095 5.28676 27.0066 5.53125 27.0066H22.1251C22.3696 27.0066 22.6041 26.9095 22.7769 26.7366C22.9498 26.5638 23.047 26.3293 23.047 26.0848C23.047 25.8403 22.9498 25.6058 22.7769 25.4329C22.6041 25.26 22.3696 25.1629 22.1251 25.1629H6.45313C6.45313 24.6739 6.64739 24.2049 6.99316 23.8592C7.33893 23.5134 7.8079 23.3191 8.29689 23.3191H23.9688C24.2133 23.3191 24.4478 23.222 24.6207 23.0491C24.7936 22.8762 24.8907 22.6418 24.8907 22.3973V3.95967C24.8907 3.71518 24.7936 3.48069 24.6207 3.30781C24.4478 3.13492 24.2133 3.0378 23.9688 3.0378ZM13.8282 4.88155H19.3594V13.1785L17.1458 11.5191C16.9862 11.3994 16.7921 11.3347 16.5927 11.3347C16.3932 11.3347 16.1991 11.3994 16.0395 11.5191L13.8282 13.1785V4.88155ZM23.047 21.4754H8.29689C7.64944 21.4745 7.0133 21.6451 6.45313 21.9697V6.72531C6.45313 6.23632 6.64739 5.76735 6.99316 5.42158C7.33893 5.07581 7.8079 4.88155 8.29689 4.88155H11.9844V15.0222C11.9844 15.1934 12.0321 15.3612 12.1221 15.5069C12.2121 15.6525 12.3409 15.7702 12.494 15.8468C12.6471 15.9233 12.8186 15.9558 12.9891 15.9404C13.1596 15.925 13.3225 15.8624 13.4594 15.7597L16.5938 13.4089L19.7293 15.7597C19.8886 15.8792 20.0822 15.9439 20.2813 15.9441C20.5258 15.9441 20.7603 15.847 20.9332 15.6741C21.1061 15.5012 21.2032 15.2667 21.2032 15.0222V4.88155H23.047V21.4754Z" fill="#F59E0B" />
-//                                                 </svg>
-
-//                                                 <span className="text-dark fw-semibold">50+ Courses</span>
-//                                             </div>
-//                                             <div className="bg-white rounded-pill py-2 px-3 shadow mb-2 d-inline-block">
-//                                                 <svg width="24" height="25" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                                                     <path d="M28.5782 15.2724C28.5792 14.2137 28.3197 13.171 27.8226 12.2363C27.3255 11.3016 26.606 10.5035 25.7277 9.91249C24.8493 9.32146 23.839 8.95561 22.7859 8.8472C21.7328 8.73879 20.6691 8.89115 19.6888 9.29084C18.7084 9.69054 17.8415 10.3253 17.1644 11.1391C16.4873 11.953 16.0208 12.9209 15.8061 13.9576C15.5913 14.9943 15.635 16.0679 15.9331 17.0837C16.2313 18.0996 16.7748 19.0265 17.5157 19.7827V26.3349C17.5156 26.4922 17.5557 26.6468 17.6322 26.7842C17.7087 26.9215 17.819 27.037 17.9528 27.1197C18.0865 27.2024 18.2391 27.2495 18.3962 27.2566C18.5532 27.2636 18.7095 27.2304 18.8501 27.16L22.1251 25.5214L25.4001 27.16C25.5407 27.2304 25.6969 27.2636 25.854 27.2566C26.011 27.2495 26.1637 27.2024 26.2974 27.1197C26.4311 27.037 26.5415 26.9215 26.618 26.7842C26.6945 26.6468 26.7346 26.4922 26.7345 26.3349V19.7827C27.9169 18.5793 28.579 16.9595 28.5782 15.2724ZM22.1251 10.663C23.0367 10.663 23.9279 10.9333 24.6859 11.4398C25.4439 11.9463 26.0347 12.6662 26.3836 13.5085C26.7325 14.3507 26.8238 15.2775 26.6459 16.1716C26.4681 17.0658 26.0291 17.8871 25.3844 18.5317C24.7398 19.1764 23.9185 19.6154 23.0243 19.7932C22.1302 19.9711 21.2034 19.8798 20.3611 19.5309C19.5189 19.182 18.799 18.5913 18.2925 17.8332C17.786 17.0752 17.5157 16.1841 17.5157 15.2724C17.5157 14.0499 18.0013 12.8775 18.8657 12.0131C19.7302 11.1486 20.9026 10.663 22.1251 10.663ZM22.5376 23.6661C22.4095 23.602 22.2683 23.5686 22.1251 23.5686C21.9819 23.5686 21.8406 23.602 21.7125 23.6661L19.3594 24.8438V21.1021C20.2236 21.5126 21.1684 21.7255 22.1251 21.7255C23.0818 21.7255 24.0265 21.5126 24.8907 21.1021V24.8438L22.5376 23.6661ZM15.6719 22.6474C15.6719 22.8919 15.5748 23.1264 15.4019 23.2993C15.229 23.4722 14.9945 23.5693 14.7501 23.5693H4.60938C4.12039 23.5693 3.65142 23.3751 3.30565 23.0293C2.95988 22.6835 2.76563 22.2145 2.76562 21.7256V6.97549C2.76562 6.48649 2.95988 6.01752 3.30565 5.67175C3.65142 5.32598 4.12039 5.13173 4.60938 5.13173H24.8907C25.3797 5.13173 25.8487 5.32598 26.1945 5.67175C26.5402 6.01752 26.7345 6.48649 26.7345 6.97549C26.7345 7.21998 26.6374 7.45447 26.4645 7.62735C26.2916 7.80024 26.0571 7.89737 25.8126 7.89737C25.5681 7.89737 25.3336 7.80024 25.1607 7.62735C24.9878 7.45447 24.8907 7.21998 24.8907 6.97549H4.60938V21.7256H14.7501C14.9945 21.7256 15.229 21.8227 15.4019 21.9956C15.5748 22.1684 15.6719 22.4029 15.6719 22.6474ZM13.8282 16.1943C13.8282 16.4388 13.731 16.6733 13.5582 16.8461C13.3853 17.019 13.1508 17.1162 12.9063 17.1162H8.2969C8.0524 17.1162 7.81792 17.019 7.64503 16.8461C7.47215 16.6733 7.37502 16.4388 7.37502 16.1943C7.37502 15.9498 7.47215 15.7153 7.64503 15.5424C7.81792 15.3695 8.0524 15.2724 8.2969 15.2724H12.9063C13.1508 15.2724 13.3853 15.3695 13.5582 15.5424C13.731 15.7153 13.8282 15.9498 13.8282 16.1943ZM13.8282 12.5068C13.8282 12.7513 13.731 12.9857 13.5582 13.1586C13.3853 13.3315 13.1508 13.4286 12.9063 13.4286H8.2969C8.0524 13.4286 7.81792 13.3315 7.64503 13.1586C7.47215 12.9857 7.37502 12.7513 7.37502 12.5068C7.37502 12.2623 7.47215 12.0278 7.64503 11.8549C7.81792 11.682 8.0524 11.5849 8.2969 11.5849H12.9063C13.1508 11.5849 13.3853 11.682 13.5582 11.8549C13.731 12.0278 13.8282 12.2623 13.8282 12.5068Z" fill="#139A74" />
-//                                                 </svg>
-
-//                                                 <span className="text-dark fw-semibold">Certified Courses</span>
-//                                             </div>
-//                                             <div className="bg-white rounded-pill py-2 px-3 shadow">
-//                                                 <svg width="24" height="25" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                                                     <path d="M18.9492 12.9114L13.4179 9.22386C13.2791 9.13121 13.1176 9.078 12.9509 9.06992C12.7842 9.06185 12.6184 9.0992 12.4712 9.17799C12.324 9.25678 12.201 9.37406 12.1153 9.5173C12.0295 9.66055 11.9843 9.82438 11.9844 9.99132V17.3664C11.9843 17.5333 12.0295 17.6971 12.1153 17.8404C12.201 17.9836 12.324 18.1009 12.4712 18.1797C12.6184 18.2585 12.7842 18.2958 12.9509 18.2878C13.1176 18.2797 13.2791 18.2265 13.4179 18.1338L18.9492 14.4463C19.0757 14.3622 19.1794 14.2481 19.2511 14.1142C19.3228 13.9803 19.3603 13.8307 19.3603 13.6788C19.3603 13.5269 19.3228 13.3774 19.2511 13.2435C19.1794 13.1096 19.0757 12.9955 18.9492 12.9114ZM13.8282 15.6436V11.7198L16.7759 13.6788L13.8282 15.6436ZM24.8907 5.38193H4.60938C4.12039 5.38193 3.65142 5.57618 3.30565 5.92195C2.95988 6.26772 2.76563 6.73669 2.76562 7.22569V20.132C2.76563 20.621 2.95988 21.09 3.30565 21.4357C3.65142 21.7815 4.12039 21.9757 4.60938 21.9757H24.8907C25.3797 21.9757 25.8487 21.7815 26.1945 21.4357C26.5402 21.09 26.7345 20.621 26.7345 20.132V7.22569C26.7345 6.73669 26.5402 6.26772 26.1945 5.92195C25.8487 5.57618 25.3797 5.38193 24.8907 5.38193ZM24.8907 20.132H4.60938V7.22569H24.8907V20.132ZM26.7345 24.7414C26.7345 24.9859 26.6374 25.2204 26.4645 25.3933C26.2916 25.5661 26.0571 25.6633 25.8126 25.6633H3.6875C3.44301 25.6633 3.20852 25.5661 3.03564 25.3933C2.86275 25.2204 2.76563 24.9859 2.76562 24.7414C2.76562 24.4969 2.86275 24.2624 3.03564 24.0895C3.20852 23.9166 3.44301 23.8195 3.6875 23.8195H25.8126C26.0571 23.8195 26.2916 23.9166 26.4645 24.0895C26.6374 24.2624 26.7345 24.4969 26.7345 24.7414Z" fill="#E53E3E" />
-//                                                 </svg>
-
-//                                                 <span className="text-dark fw-semibold">Online Project</span>
-//                                             </div>
-//                                         </div>
-//                                         <svg width="205" height="189" viewBox="0 0 205 189" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                                             <path d="M0.0391235 179.983C0.0391235 80.8399 80.4107 0.468323 179.554 0.468323H189.034C197.318 0.468323 204.033 7.18386 204.033 15.4679V166.407C204.033 178.626 194.127 188.532 181.908 188.532H8.58745C3.86634 188.532 0.0391235 184.704 0.0391235 179.983Z" fill="#139A74" />
-//                                         </svg>
-//                                     </div>
-//                                 </div>
-//                                 <div className="col-md-6 mt-8 mt-md-0">
-//                                     <div className="bg-warning d-flex justify-content-center rounded-4 position-relative" style={{ paddingBottom: 150, paddingTop: 100 }}>
-//                                         <img src="../assets/images/landing-immigration/college-student-holding-laptop-pointing-right.png" alt="" className="position-absolute bottom-0 me-8" />
-//                                     </div>
-//                                 </div>
-//                                 <div className="col-md-6 flex-column justify-content-end d-none d-md-flex">
-//                                     <div className="bg-primary d-flex justify-content-center rounded-4 position-relative mx-5" style={{ paddingBottom: 150, paddingTop: 100 }}>
-//                                         <img src="../assets/images/landing-immigration/front-view-young-man-going-university-with-bag.png" alt="" className="position-absolute bottom-0" />
-//                                     </div>
-//                                 </div>
-//                                 <div className="col-md-6 d-none d-md-block">
-//                                     <div className="position-relative mt-5">
-//                                         <svg width="204" height="189" viewBox="0 0 204 189" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                                             <path d="M203.994 9.01663C203.994 108.16 123.622 188.532 24.4789 188.532H14.9995C6.71548 188.532 -3.05176e-05 181.816 -3.05176e-05 173.532V22.5934C-3.05176e-05 10.374 9.90572 0.468292 22.1251 0.468292H195.446C200.167 0.468292 203.994 4.29552 203.994 9.01663Z" fill="#EF8E70" />
-//                                         </svg>
-//                                         <div className="bg-white rounded-4 p-3 position-absolute bottom-10 start-10 mb-3 shadow">
-//                                             <div className="avatar-group mb-2">
-//                                                 <span className="avatar avatar-md">
-//                                                     { /* avatar  */}
-//                                                     <img alt="avatar" src="../assets/images/avatar/avatar-1.jpg" className="rounded-circle" />
-//                                                 </span>
-//                                                 { /* avatar  */}
-//                                                 <span className="avatar avatar-md">
-//                                                     <img alt="avatar" src="../assets/images/avatar/avatar-2.jpg" className="rounded-circle" />
-//                                                 </span>
-//                                                 { /* avatar  */}
-//                                                 <span className="avatar avatar-md">
-//                                                     <img alt="avatar" src="../assets/images/avatar/avatar-3.jpg" className="rounded-circle" />
-//                                                 </span>
-//                                                 { /* avatar  */}
-//                                                 <span className="avatar avatar-md">
-//                                                     <img alt="avatar" src="../assets/images/avatar/avatar-4.jpg" className="rounded-circle" />
-//                                                 </span>
-//                                             </div>
-//                                             <div className="text-dark fw-bold fs-4">70,324+</div>
-//                                             <div className="text-gray-500">Students Preparing with us</div>
-//                                         </div>
-//                                     </div>
-//                                 </div>
+//                             <span className="absolute inset-0 flex justify-evenly items-center opacity-0 group-hover:opacity-100 transition duration-500"></span>
+//                         </li>
+//                         {/* Panel 2: Product Photography */}
+//                         <li className="panel relative overflow-hidden group">
+//                             <a
+//                                 href="#"
+//                                 className="absolute inset-0 flex justify-center items-start pt-8 text-5xl font-bold"
+//                             >
+//                                 Product Photography
+//                             </a>
+//                             <div className="relative h-full w-full">
+//                                 <Image
+//                                     src="/img/team/4.jpg"
+//                                     alt="Product Photography"
+//                                     fill
+//                                     style={{ objectFit: "cover" }}
+//                                     className="brightness-50 group-hover:brightness-100 transition duration-500"
+//                                 />
 //                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
+//                             <span className="absolute inset-0 flex justify-evenly items-center opacity-0 group-hover:opacity-100 transition duration-500"></span>
+//                         </li>
+//                         {/* Panel 3: Corporate Photography */}
+//                         <li className="panel relative overflow-hidden group">
+//                             <a
+//                                 href="#"
+//                                 className="absolute inset-0 flex justify-center items-start pt-8 text-5xl font-bold"
+//                             >
+//                                 Corporate Photography
+//                             </a>
+//                             <div className="relative h-full w-full">
+//                                 <Image
+//                                     src="/img/team/3.jpg"
+//                                     alt="Corporate Photography"
+//                                     fill
+//                                     style={{ objectFit: "cover" }}
+//                                     className="brightness-50 group-hover:brightness-100 transition duration-500"
+//                                 />
+//                             </div>
+//                             <span className="absolute inset-0 flex justify-evenly items-center opacity-0 group-hover:opacity-100 transition duration-500"></span>
+//                         </li>
+//                         {/* Panel 4: Wedding Photography */}
+//                         <li className="panel relative overflow-hidden group">
+//                             <a
+//                                 href="#"
+//                                 className="absolute inset-0 flex justify-center items-start pt-8 text-5xl font-bold"
+//                             >
+//                                 Wedding Photography
+//                             </a>
+//                             <div className="relative h-full w-full">
+//                                 <Image
+//                                     src="/img/team/2.jpg"
+//                                     alt="Wedding Photography"
+//                                     fill
+//                                     style={{ objectFit: "cover" }}
+//                                     className="brightness-50 group-hover:brightness-100 transition duration-500"
+//                                 />
+//                             </div>
+//                             <span className="absolute inset-0 flex justify-evenly items-center opacity-0 group-hover:opacity-100 transition duration-500"></span>
+//                         </li>
+//                     </ul>
+//                     {/* Animated "EXPLORE" Heading */}
+//                     <h1 className="mt-24 flex justify-center">
+//                         {["E", "X", "P", "L", "O", "R", "E"].map((letter, index) => (
+//                             <span
+//                                 key={index}
+//                                 className="gradient-text letter text-6xl font-bold opacity-0 animate-bounceInFwd"
+//                                 style={{ animationDelay: `${2.25 + index * 0.35}s` }}
+//                             >
+//                                 {letter}
+//                             </span>
+//                         ))}
+//                     </h1>
+//                     {/* Geo-Square Element */}
+//                     <span className="geo-square flex justify-center items-center mx-auto mt-16 opacity-0">
+//                         <Image
+//                             src="/img/team/1.jpg"
+//                             width={600}
+//                             height={800}
+//                             alt="Couple"
+//                             style={{ objectFit: "cover" }}
+//                         />
+//                     </span>
+//                 </article>
 //             </section>
-//             { /*Hero Section*/}</>
-//     )
-// }
 
-// export default Baby
+//             {/* Global Custom CSS for animations and variables */}
+//             <style jsx global>{`
+//         :root {
+//           --yellow: #ffd51c;
+//           --light-yellow: rgba(255, 209, 98, 0.6);
+//         }
+//         .gradient-text {
+//           background-image: linear-gradient(
+//             to bottom,
+//             var(--yellow),
+//             var(--light-yellow)
+//           );
+//           -webkit-background-clip: text;
+//           -webkit-text-fill-color: transparent;
+//         }
+//         @keyframes bounceInFwd {
+//           0% {
+//             transform: scale(0);
+//             opacity: 0;
+//           }
+//           38% {
+//             transform: scale(1);
+//             opacity: 1;
+//           }
+//           55% {
+//             transform: scale(0.7);
+//           }
+//           72% {
+//             transform: scale(1);
+//           }
+//           81% {
+//             transform: scale(0.84);
+//           }
+//           89% {
+//             transform: scale(1);
+//           }
+//           95% {
+//             transform: scale(0.95);
+//           }
+//           100% {
+//             transform: scale(1);
+//           }
+//         }
+//         .animate-bounceInFwd {
+//           animation: bounceInFwd 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+//         }
+//       `}</style>
+//         </div>
+//     );
+// };
+
+// export default PhotographyTemplate;
 
 
 
+'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
+
+export default function ExplorePanel() {
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const panels = [
+        { id: 1, image: '/img/team/1.jpg', text: 'Adventure' },
+        { id: 2, image: '/img/team/2.jpg', text: 'Nature' },
+        { id: 3, image: '/img/team/3.jpg', text: 'City Life' },
+        { id: 4, image: '/img/team/4.jpg', text: 'Oceans' },
+        { id: 5, image: '/img/team/1.jpg', text: 'Mountains' },
+    ];
+
+    return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-900">
+            <div className="absolute top-10 text-white text-4xl font-bold">EXPLORE</div>
+            <div className="flex gap-4 max-w-6xl">
+                {panels.map((panel, index) => (
+                    <div
+                        key={panel.id}
+                        className={`relative h-[500px] flex-1 cursor-pointer overflow-hidden rounded-lg transition-all duration-500 ease-in-out shadow-lg 
+              ${activeIndex === index ? 'flex-[5]' : 'flex-[1.2]'} 
+              hover:flex-[5]`}
+                        onMouseEnter={() => setActiveIndex(index)}
+                        onMouseLeave={() => setActiveIndex(null)}
+                    >
+                        <Image
+                            src={panel.image}
+                            alt={panel.text}
+                            // layout="fill"
+                            // objectFit="cover"
+                            fill
+                            className="absolute inset-0 w-full h-full"
+                        />
+                        <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white p-2 rounded-md text-lg font-semibold">
+                            {panel.text}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}

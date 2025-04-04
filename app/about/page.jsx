@@ -8,14 +8,12 @@ import SEO from '../components/common/SEO'
 import WhyChooseUs from '../components/about/WhyChooseUs'
 import ServicesSection from '../components/services/ServicesSection'
 import InfoCards from '../components/InfoCards'
-import TabCard from '../components/services/Tabs'
 
 const About = () => {
   return (
     <>
       <SEO title={"About Us"} />
       {/* <WhyUs /> */}
-      <TabCard />
       <WhyChooseUs />
       <AboutUs />
       <SeparatingSection />
