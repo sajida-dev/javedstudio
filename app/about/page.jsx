@@ -17,7 +17,7 @@ const About = () => {
       <CEO />
       <TeamSection />
       <InfoCards />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
       <Memories />
     </>
 

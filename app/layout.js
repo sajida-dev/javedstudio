@@ -25,6 +25,29 @@ const geistMono = Geist_Mono({
 
 
 export default function RootLayout({ children }) {
+  const schemaMarkup = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Javed Studio",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Main Bazar Jauharabad",
+      "addressLocality": "Jauharabad",
+      "addressRegion": "Punjab",
+      "postalCode": "41200",
+      "addressCountry": "PK"
+    },
+    "url": "https://javedstudio.netlify.app",
+    "telephone": "+92-300-7784807",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61564252206804&mibextid=ZbWKwL",
+      "https://www.instagram.com/javedstudio751",
+      "https://www.linkedin.com/in/javed-iqbal-24b610323/",
+      "https://www.youtube.com/channel/UCQl2fpUV6Eq0Wv2OgkEQ_AA",
+      "https://www.tiktok.com/@javedstudio807"
+    ]
+  };
+
 
   return (
     <html lang="en">
@@ -39,6 +62,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:title" content="{metadata.twitter.title}" />
         <meta name="twitter:description" content="{metadata.twitter.description}" />
         <meta name="twitter:image" content="{metadata.twitter.image}" />
+        <link rel="canonical" href="https://javedstudio.netlify.app" />
         <link rel="icon" href="/logo.png" type="image/png" />
         <style>{`
           .react-medium-image-zoom-overlay {
@@ -46,6 +70,7 @@ export default function RootLayout({ children }) {
             backdrop-filter: blur(8px) !important;
           }
         `}</style>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
