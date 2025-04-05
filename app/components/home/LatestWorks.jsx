@@ -6,17 +6,8 @@ import { motion } from "framer-motion";
 import { CldImage } from 'next-cloudinary';
 
 const images = [
-    "14_iznicr",
-    "19_rgjbzg",
-    "13_ajhgxz",
-    "16_dhvrll",
-    "11_fc141n",
-    "15_emxie9",
-    "12_exmgiv",
-    "8_fbnkl1",
-    "10_am1l89",
-    "5_jwnhdr",
-    "1_o3jn6i",
+    "14_iznicr", "19_rgjbzg", "13_ajhgxz", "16_dhvrll", "11_fc141n",
+    "15_emxie9", "12_exmgiv", "8_fbnkl1", "10_am1l89", "5_jwnhdr", "1_o3jn6i",
 ];
 
 export default function LatestWorks() {
@@ -50,7 +41,7 @@ export default function LatestWorks() {
     return (
         <div className="latestwork py-10 ">
             <div className="text-center mb-6">
-                <h3 className="text-3xl font-bold">
+                <h3 className="text-3xl font-extrabold">
                     Latest <span className="text-amber-400">Works</span>
                 </h3>
                 <hr className="w-24 mx-auto border-amber-400 mt-2" />

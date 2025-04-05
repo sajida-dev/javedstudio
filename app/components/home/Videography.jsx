@@ -1,45 +1,70 @@
 'use client';
 
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
 const Videography = () => {
     const [isPlaying, setIsPlaying] = useState(false);
 
+    const posterUrl =
+        'https://res.cloudinary.com/dgjrgkaop/image/upload/v1743778303/1_pbqgjh.jpg';
+    const videoUrl =
+        'https://res.cloudinary.com/dgjrgkaop/video/upload/v1743859815/Download_k90vt7.mp4';
+
     return (
-        <div className="relative overflow-hidden" id='videography'>
-            <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
-                <div className="max-w-2xl py-5 text-center mx-auto">
-                    <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl">
+        <section id="videography" className="bg-gray-50">
+            <div className="container mx-auto px-4 py-12">
+                {/* Header */}
+                <div className="max-w-2xl mx-auto text-center mb-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800">
                         Showcasing Our <span className="text-amber-600">Videography</span>
-                    </h1>
-                    <p className="mt-3 text-lg text-gray-800">
+                    </h2>
+                    <p className="mt-4 text-lg text-gray-600">
                         Experience our best video productions.
                     </p>
                 </div>
 
-                <div className="mt-10 relative max-w-5xl mx-auto">
+                {/* Video / Poster */}
+                <div className="max-w-6xl mx-auto">
                     {!isPlaying ? (
                         <div
-                            className="w-full object-cover h-96 sm:h-120 bg-[url('https://res.cloudinary.com/dgjrgkaop/image/upload/v1743778303/1_pbqgjh.jpg?auto=format&fit=crop&w=1600&q=80')] bg-no-repeat bg-center bg-cover rounded-xl flex items-center justify-center cursor-pointer"
+                            role="button"
+                            aria-label="Play video"
                             onClick={() => setIsPlaying(true)}
+                            className="relative w-full aspect-video rounded-xl overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]"
+                            style={{
+                                backgroundImage: `url('${posterUrl}?auto=format&fit=crop&w=1600&q=80')`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                            }}
                         >
-                            <button className="py-3 px-4 flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50">
-                                <svg className="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                                    <polygon points="5 3 19 12 5 21 5 3" />
-                                </svg>
-                                Play Video
-                            </button>
+                            {/* Dark overlay + blur behind play button */}
+                            <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dgjrgkaop/image/upload/v1743778303/1_pbqgjh.jpg?auto=format&fit=crop&w=1600&q=80')] bg-no-repeat bg-center bg-cover rounded-xl cursor-pointer flex items-center justify-center">
+                                <button
+                                    className="flex items-center gap-2 px-5 py-3 bg-white bg-opacity-90 rounded-full text-gray-800 font-medium hover:bg-opacity-100 transition"
+                                    aria-label="Play video"
+                                >
+                                    <FontAwesomeIcon icon={faPlay} className="text-xl" />
+                                    <span>Play Video</span>
+                                </button>
+                            </div>
                         </div>
                     ) : (
-                        <video className="w-full h-96 sm:h-120 rounded-xl" controls autoPlay>
-                            <source src="/post.mp4" type="video/mp4" />
+                        <video
+                            className="w-full aspect-video rounded-xl shadow-lg"
+                            controls
+                            autoPlay
+                            preload="metadata"
+                            poster={`${posterUrl}?auto=format&fit=crop&w=1600&q=80`}
+                        >
+                            <source src={videoUrl} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
-
                     )}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

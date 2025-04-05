@@ -1,3 +1,4 @@
+// image id's of cloudinary images
 
 export const corporateGallery = [
     "12_vcvx6e",

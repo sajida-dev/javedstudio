@@ -8,6 +8,9 @@ import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 import WhatsAppButton from "./components/common/WhatsApp";
 import SEO from "./components/common/SEO";
+import Head from "next/head";
+import { menu } from "./components/common/Menu";
+import { metadata } from "./components/common/MetaData";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,30 +22,31 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Javed Studio",
-  description: "Photography services",
-};
+
 
 export default function RootLayout({ children }) {
-  const menu = [
-    { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
-    {
-      label: "Services",
-      href: "/services",
-      submenu: [
-        { label: "Baby Photography", href: "/service/baby" },
-        { label: "Product Photography", href: "/service/product" },
-        { label: "Couple Photography", href: "/service/couple" },
-        { label: "Wedding Photography", href: "/service/weddings" },
-        { label: "Corporate Photography", href: "/service/corporate" },
-      ]
-    },
-    { label: "Contact Us", href: "/contact" }
-  ];
+
   return (
     <html lang="en">
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content="{metadata.description}" />
+        <meta property="og:title" content="{metadata.openGraph.title}" />
+        <meta property="og:description" content="{metadata.openGraph.description}" />
+        <meta property="og:url" content="{metadata.openGraph.url}" />
+        <meta property="og:image" content="{metadata.openGraph.images[0].url}" />
+        <meta name="twitter:card" content="{metadata.twitter.card}" />
+        <meta name="twitter:title" content="{metadata.twitter.title}" />
+        <meta name="twitter:description" content="{metadata.twitter.description}" />
+        <meta name="twitter:image" content="{metadata.twitter.image}" />
+        <link rel="icon" href="/logo.png" type="image/png" />
+        <style>{`
+          .react-medium-image-zoom-overlay {
+            background-color: rgba(110, 109, 109, 0.463) !important;
+            backdrop-filter: blur(8px) !important;
+          }
+        `}</style>
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

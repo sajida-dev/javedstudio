@@ -10,12 +10,12 @@ const teamMembers = [
         image: "IMG_0934_s8cuij",
     },
     {
-        name: "Ali",
+        name: "Rizwan Ullah",
         role: "HR, PIT",
         image: "rizwan_lxcwlv",
     },
     {
-        name: "Rizwan Ullah",
+        name: "Ali",
         role: "HR, INCA",
         image: "rizwan_lxcwlv",
     },

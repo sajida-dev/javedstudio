@@ -9,7 +9,7 @@ const Couple = () => {
             <SEO title={"Couple Photography"} />
             <Gallery
                 page={"Couple Photography"}
-                paragraph={"Capture your love story with breathtaking couple photoshoots, perfect for engagements, anniversaries, and special moments."}
+                paragraph={"Capture your love story with couple photoshoots, perfect for engagements, Nikah, Mayon, Mehndi, Weddings, anniversaries, Birthdays, and special moments."}
                 images={coupleGallery} />
         </>
     )

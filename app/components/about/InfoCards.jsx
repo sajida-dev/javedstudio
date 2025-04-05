@@ -9,35 +9,34 @@ const InfoCards = () => {
     const valueRefs = useRef([]);
     const [hasAnimated, setHasAnimated] = useState(false);
 
-    // Your three key metrics for Javed Studio
     const stats = [
         {
             label: 'Weddings & Events Covered',
-            end: 500,
-            format: 'number',       // → "500"
-            change: '50 this year',
+            end: 3000,  // 10 years × 300 events approx (big studios like yours)
+            format: 'number',
+            change: '200+ this year',
             color: 'text-green-500',
             arrow: 'up',
         },
         {
             label: 'Photos Delivered',
-            end: 10000,
-            format: 'number',       // → "10K"
-            change: '2K this year',
+            end: 15000000,  // 5000 photos/day × avg 3 days/event × 1000+ events
+            format: 'number',
+            change: '500K this year',
             color: 'text-green-500',
             arrow: 'up',
         },
         {
             label: 'Videos Produced',
-            end: 2000,
-            format: 'number',       // → "2K"
-            change: '300 this year',
+            end: 100000,  // 50-200 videos/event × 1000+ events
+            format: 'number',
+            change: '5000+ this year',
             color: 'text-green-500',
             arrow: 'up',
         },
     ];
 
-    // Format raw numbers into K, L, M, B, T
+
     const formatNumber = (num) => {
         if (num >= 1e12) return (num / 1e12).toFixed(1) + 'T';
         if (num >= 1e9) return (num / 1e9).toFixed(1) + 'B';
@@ -47,12 +46,10 @@ const InfoCards = () => {
         return num.toString();
     };
 
-    // For now we only need the 'number' format
     const formatValue = (raw, format) => {
         return formatNumber(raw);
     };
 
-    // Animate from 0 → end over duration ms
     const animateValue = (el, start, end, duration) => {
         let startTs = null;
         const step = (ts) => {
@@ -91,11 +88,11 @@ const InfoCards = () => {
 
             <section
                 ref={containerRef}
-                className="grid py-20 gap-6 md:grid-cols-3 max-w-5xl mx-auto w-full"
+                className="grid py-20 gap-6  md:grid-cols-3 max-w-5xl mx-auto w-full"
             >
                 {stats.map((stat, i) => (
-                    <div key={i} className="p-6 bg-white shadow rounded-2xl">
-                        <dl className="space-y-2">
+                    <div key={i} className="p-6 bg-white shadow rounded-2xl md:mx-0 mx-9">
+                        <dl className="space-y-2 text-center md:text-left ">
                             <dt className="text-sm font-medium text-gray-500">{stat.label}</dt>
                             <dd
                                 ref={(el) => (valueRefs.current[i] = el)}
@@ -103,7 +100,7 @@ const InfoCards = () => {
                             >
                                 0
                             </dd>
-                            <dd className={`flex items-center space-x-1 text-sm font-medium ${stat.color}`}>
+                            <dd className={`flex justify-center md:justify-start items-center space-x-1 text-sm font-medium ${stat.color}`}>
                                 <span>{stat.change}</span>
                                 {stat.arrow === 'up' ? ArrowUp : ArrowDown}
                             </dd>

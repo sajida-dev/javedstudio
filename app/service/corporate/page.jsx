@@ -9,7 +9,7 @@ const Corporate = () => {
             <SEO title={"Corporate Photography"} />
             <Gallery
                 page={"Corporate Photography"}
-                paragraph={"Elevate your brand with professional corporate photography that enhances your company's image and marketing materials."}
+                paragraph={"Uplift your brand with professional corporate photography that enhances your company's image and marketing materials."}
                 images={corporateGallery} />
         </>
 

@@ -30,26 +30,7 @@ const WhyChooseUs = () => {
     return (
         <section className="mb-10 bg-white">
             <AboutTopHeading />
-            {/* <div className="h-50">
-                <CldImage className="relative" src="v1743850305" width={300} height={400} />
-                <h2 className="absolute">About Us</h2>
-            </div> */}
-            {/* <div className="relative w-full h-[50vh] min-h-[300px]">
-                <CldImage
-                    src="1_pbqgjh"
-                    width={1920}
-                    height={780}
-                    alt="About Us"
-                    className="w-full object-cover"
-                />
-
-                <h2 className="absolute inset-0 flex items-center justify-center text-4xl md:text-6xl font-extrabold text-white tracking-widest">
-                    <span className="relative stroke-text">
-                        About Us
-                    </span>
-                </h2>
-            </div> */}
-            <div className="container mx-auto px-5 mt-10">
+            <div className="container mx-auto px-5 lg:mt-10 md:mt-7 mt-1">
                 <h2 className="text-center text-4xl font-bold">Why Choose Javed Studio?</h2>
                 <div className="relative mx-auto max-w-5xl text-center">
                     <h2 className="text-3xl my-7 lg:text-4xl font-bold bg-gradient-to-b from-amber-500 to-amber-600 bg-clip-text text-transparent">

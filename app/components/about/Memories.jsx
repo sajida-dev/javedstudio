@@ -31,11 +31,14 @@ const Memories = () => {
         window.requestAnimationFrame(step);
     };
 
+
+
     const stats = [
         { ref: expRef, end: 25, label: 'Years of Experience' },
-        { ref: projectsRef, end: 80953000, label: 'Weddings & Events Covered' },
-        { ref: clientsRef, end: 100000, label: 'Happy Clients' },
+        { ref: projectsRef, end: 3000, label: 'Weddings & Events Covered' },
+        { ref: clientsRef, end: 500000, label: 'Happy Clients' },
     ];
+
 
     useEffect(() => {
         const obs = new IntersectionObserver(
@@ -91,46 +94,7 @@ const Memories = () => {
                                             </h6>
                                         </div>
                                     ))}
-                                    {/* Years of Experience */}
-                                    {/* <div className="flex-col justify-start items-start inline-flex">
-                                        <div className='flex-row justify-start'>
-                                            <h3
-                                                ref={expRef}
-                                                className="text-gray-900 text-4xl font-bold font-manrope leading-normal"
-                                            >
-                                                0
-                                            </h3>
-                                        </div>
-                                        <h6 className="text-gray-500 text-base font-normal leading-relaxed">
-                                            Years of Experience
-                                        </h6>
-                                    </div> */}
 
-                                    {/* Weddings & Events Covered */}
-                                    {/* <div className="flex-col justify-start items-start inline-flex">
-                                        <h4
-                                            ref={projectsRef}
-                                            className="text-gray-900 text-4xl font-bold font-manrope leading-normal"
-                                        >
-                                            0
-                                        </h4>
-                                        <h6 className="text-gray-500 text-base font-normal leading-relaxed">
-                                            Weddings & Events Covered
-                                        </h6>
-                                    </div> */}
-
-                                    {/* Happy Clients */}
-                                    {/* <div className="flex-col justify-start items-start inline-flex">
-                                        <h4
-                                            ref={clientsRef}
-                                            className="text-gray-900 text-4xl font-bold font-manrope leading-normal"
-                                        >
-                                            0
-                                        </h4>
-                                        <h6 className="text-gray-500 text-base font-normal leading-relaxed">
-                                            Happy Clients
-                                        </h6>
-                                    </div> */}
                                 </div>
 
                             </div>

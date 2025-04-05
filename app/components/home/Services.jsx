@@ -37,7 +37,6 @@ const Test = () => {
                 {teamData.map((member) => (
                     <div style={{ height: '500px' }} key={member.id} className="relative group w-full object-cover overflow-hidden  shadow-md">
                         <a href={member.url} className="block w-full h-full">
-
                             <Image
                                 src={member.image}
                                 alt={member.name}
@@ -45,17 +44,16 @@ const Test = () => {
                                 className="object-cover transition-transform duration-300"
                                 priority={member.id === 1} // Load first image faster
                             />
-
                             {/* Static Heading */}
-                            <h2 className="absolute left-0 top-0 w-full h-[50px] text-center mx-auto my-3 text-white font-extrabold lg:opacity-100 md:opacity-100 sm:opacity-0 text-xl md:text-2xl transition-opacity duration-300 group-hover:opacity-0 z-20">
+                            <h2 className="absolute left-0 top-0 w-full h-[50px] text-center mx-auto my-3 text-white font-extrabold lg:opacity-100 md:opacity-100 opacity-0 text-xl md:text-2xl transition-opacity duration-300 group-hover:opacity-0 z-20">
                                 {member.name}
                             </h2>
 
                             {/* Overlay on hover */}
-                            <div className="absolute bottom-[calc(100%-50px)] left-0 right-0 bg-white opacity-50 bg-opacity-30 overflow-hidden lg:h-0 md:h-0 sm:h-full  group-hover:h-[50px] transition-all duration-500 z-10">
-                                <div className="flex items-center justify-center h-full font-extrabold text-lg md:text-2xl text-black group-hover:text-amber-500">
+                            <div className="absolute lg:bottom-[calc(100%-50px)] md:bottom-[calc(100%-50px)]  left-0 right-0 bg-white opacity-50 bg-opacity-30 overflow-hidden lg:h-0 md:h-0 h-16  group-hover:h-[50px] transition-all duration-500 z-10">
+                                <h2 className="flex items-center justify-center h-full font-extrabold text-lg md:text-2xl text-amber-500 group-hover:text-amber-500">
                                     {member.name}
-                                </div>
+                                </h2>
                             </div>
                         </a>
                     </div>

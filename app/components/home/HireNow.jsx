@@ -1,27 +1,41 @@
 'use client'
 import { CldImage } from 'next-cloudinary'
+import Link from 'next/link'
 import React from 'react'
 
 const HireNow = () => {
     return (
-        <>
-            <section className='my-25' id='book-now'>
-                <div className="relative !flex h-[90vh] w-full items-center justify-between px-10">
-                    <CldImage src="1_pbqgjh" fill alt="bg-img" className="absolute inset-0 right-0 ml-auto h-full rounded-bl-[100px] object-cover object-center " />
-                    <div className="container mx-auto lg:mt-0 ">
-                        <div className="grid grid-cols-12 text-center lg:text-left">
-                            <div className="relative flex flex-col bg-clip-border text-gray-700 px-6 py-10 border border-white shadow-lg col-span-full rounded-xl bg-white/90 shadow-black/10 backdrop-blur-sm backdrop-saturate-200 xl:col-span-7">
-                                <h1 className="block antialiased tracking-normal font-sans font-semibold text-blue-amber-600 text-3xl !leading-snug lg:text-5xl">Hire Us</h1>
-                                <p className="block antialiased font-sans text-xl font-normal leading-relaxed  mb-10 mt-6 text-gray-900">Book us today and make your moments unforgettable!</p>
-                                <div className="flex justify-center gap-4 mb-8 lg:justify-start">
-                                    <button className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-amber-600 text-white shadow-md shadow-amber-900/10 hover:shadow-lg hover:shadow-amber-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">contact us</button>
-                                </div>
-                            </div>
+        <section id="book-now" className="relative h-[90vh] w-full flex items-center justify-center my-24 overflow-hidden">
+            {/* Background Image */}
+            <CldImage
+                src="1_pbqgjh"
+                fill
+                alt="Hire Professional Photographers and Videographers"
+                className="absolute inset-0 object-cover object-center rounded-bl-[100px]"
+            />
+
+            {/* Content */}
+            <div className="container relative z-10 px-4 lg:px-10">
+                <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-center">
+                    <div className="xl:col-span-7 bg-white/90 border border-white shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-200 rounded-xl px-6 py-10">
+                        <h1 className="text-3xl lg:text-5xl font-semibold text-amber-600 leading-snug mb-4">
+                            Hire Us
+                        </h1>
+                        <p className="text-lg lg:text-xl text-gray-900 mb-8">
+                            Book us today and make your moments unforgettable!
+                        </p>
+                        <div>
+                            <Link
+                                href="/contact"
+                                className="inline-block px-6 py-3 text-xs font-bold uppercase bg-amber-600 text-white rounded-lg shadow-md shadow-amber-900/10 hover:shadow-lg hover:shadow-amber-900/20 transition duration-300"
+                            >
+                                Contact Us
+                            </Link>
                         </div>
                     </div>
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     )
 }
 

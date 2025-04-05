@@ -1,3 +1,4 @@
+// image id's of cloudinary images
 
 export const babyGallery = [
     "13_nkpanv",

@@ -9,7 +9,7 @@ const Baby = () => {
       <SEO title={"Baby Photography"} />
       <Gallery
         page={"Baby Photography"}
-        paragraph={"Cherish the innocence and cuteness of your little one with our professional baby photography sessions, creating memories that last forever."}
+        paragraph={"Capture the innocence and cuteness of your little one with our professional baby photography sessions, creating memories that last forever."}
         images={babyGallery} />
     </>
   )
