@@ -1,7 +1,18 @@
 'use client'
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import {
+    faGoogle,
+    faFacebookF,
+    faInstagram,
+    faLinkedinIn,
+    faYoutube,
+    faTiktok
+} from '@fortawesome/free-brands-svg-icons';
+
+import {
+    faEnvelope
+} from '@fortawesome/free-solid-svg-icons';
 import { CldImage } from 'next-cloudinary';
 
 const Footer = ({ logo, address }) => {
@@ -36,20 +47,29 @@ const Footer = ({ logo, address }) => {
             </div>
 
             {/* Social Media Links */}
-            <div className="max-w-screen-lg mx-auto flex flex-wrap  justify-center sm:justify-between py-5 px-6">
+            <div className="max-w-screen-lg mx-auto flex flex-wrap  justify-center sm:justify-between my-5 px-6">
                 <span className="text-gray-600 text-sm sm:text-xs sm:mb-15">© {new Date().getFullYear()} {logo}. All rights reserved.</span>
-                <div className="flex space-x-4">
-                    <a href="#" className="hover:text-amber-600" aria-label="Twitter">
-                        <FontAwesomeIcon icon={faTwitter} className="text-gray-500 hover:text-amber-600 text-xl" />
+                <div className="flex items-center gap-4 flex-wrap text-sm my-0">
+                    <a href="https://g.co/kgs/6uTawj9" className="hover:text-amber-600" aria-label="Google">
+                        <FontAwesomeIcon icon={faGoogle} className="text-gray-500 hover:text-amber-600 text-lg" />
                     </a>
                     <a href="https://www.facebook.com/profile.php?id=61564252206804" className="hover:text-amber-600" aria-label="Facebook">
-                        <FontAwesomeIcon icon={faFacebook} className="text-gray-500 hover:text-amber-600 text-xl" />
+                        <FontAwesomeIcon icon={faFacebookF} className="text-gray-500 hover:text-amber-600 text-lg" />
                     </a>
                     <a href="https://www.instagram.com/javedstudio751/" className="hover:text-amber-600" aria-label="Instagram">
-                        <FontAwesomeIcon icon={faInstagram} className="text-gray-500 hover:text-amber-600 text-xl" />
+                        <FontAwesomeIcon icon={faInstagram} className="text-gray-500 hover:text-amber-600 text-lg" />
                     </a>
-                    <a href="#" className="hover:text-amber-600" aria-label="LinkedIn">
-                        <FontAwesomeIcon icon={faLinkedin} className="text-gray-500 hover:text-amber-600 text-xl" />
+                    <a href="https://www.linkedin.com/in/javed-iqbal-24b610323/" className="hover:text-amber-600" aria-label="LinkedIn">
+                        <FontAwesomeIcon icon={faLinkedinIn} className="text-gray-500 hover:text-amber-600 text-lg" />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCQl2fpUV6Eq0Wv2OgkEQ_AA" className="hover:text-amber-600" aria-label="YouTube">
+                        <FontAwesomeIcon icon={faYoutube} className="text-gray-500 hover:text-amber-600 text-lg" />
+                    </a>
+                    <a href="https://tiktok.com" className="hover:text-amber-600" aria-label="TikTok">
+                        <FontAwesomeIcon icon={faTiktok} className="text-gray-500 hover:text-amber-600 text-lg" />
+                    </a>
+                    <a href="mailto:info@javedstudio.com" className="hover:text-amber-600" aria-label="Email">
+                        <FontAwesomeIcon icon={faEnvelope} className="text-gray-500 hover:text-amber-600 text-lg" />
                     </a>
                 </div>
             </div>

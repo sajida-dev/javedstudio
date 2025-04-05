@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from "react";
 import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 const Gallery = ({ page, paragraph, images }) => {
     const [selectedImage, setSelectedImage] = useState(null);
 
@@ -17,10 +18,12 @@ const Gallery = ({ page, paragraph, images }) => {
 
                 <div className="sm:columns-1 md:columns-2 lg:columns-3 gap-3 space-y-3">
                     {images.map((src, index) => (
-                        <img
+                        <CldImage
                             key={index}
-                            className="w-full break-inside-avoid rounded cursor-pointer transition-transform duration-300"
+                            className="w-full max-w-[400px] break-inside-avoid rounded cursor-pointer transition-transform duration-300"
                             src={src}
+                            width={400}
+                            height={600}
                             alt={`Javed studio weddings photography and videography  ${index + 1}`}
                             onClick={() => setSelectedImage(src)}
                         />
@@ -33,10 +36,12 @@ const Gallery = ({ page, paragraph, images }) => {
                         className="fixed inset-0 flex items-center justify-center bg-gray/70 backdrop-blur-md z-50"
                         onClick={() => setSelectedImage(null)}
                     >
-                        <img
+                        <CldImage
                             src={selectedImage}
                             alt="Zoomed Image"
-                            className="max-w-4xl max-h-[90vh] rounded-lg transition-transform duration-300 scale-100 hover:scale-110"
+                            height={600}
+                            width={896}
+                            className="max-w-4xl h-full max-h-[90vh] rounded-lg transition-transform duration-300 scale-100 hover:scale-110"
                         />
                     </div>
                 )}

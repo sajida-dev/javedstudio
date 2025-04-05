@@ -1,7 +1,7 @@
 import React from 'react'
 import { babyGallery } from './GalleryData'
-import Gallery from '@/app/components/services/Gallery'
 import SEO from '@/app/components/common/SEO'
+import Gallery from '@/app/components/services/Gallery'
 
 const Baby = () => {
   return (

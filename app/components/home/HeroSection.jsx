@@ -51,15 +51,15 @@ const HeroSection = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-                    {/* Slide 3 */}
+
                     <SwiperSlide>
-                        <div className="h-120 md:h-[calc(100vh-106px)] flex flex-col bg-[url('/img/slider/4.jpg?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat">
+                        <div className="h-120 md:h-[calc(100vh-106px)] flex flex-col bg-[url('https://res.cloudinary.com/dgjrgkaop/image/upload/v1743854573/slider_3_jveaae.jpg?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat">
                             <div className="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
                                 <span className="block text-white text-lg">Timeless Memories</span>
                                 <span className="block text-white text-2xl md:text-4xl font-bold">Creating Stories Through Our Lens</span>
                                 <div className="mt-5">
                                     <a className="py-2 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100" href="#book-now">
-                                        Book a Session
+                                        Hire us Now
                                     </a>
                                 </div>
                             </div>

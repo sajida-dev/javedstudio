@@ -12,7 +12,7 @@ const SocialMediaSection = () => {
                 <meta name="description" content="Follow Javed Studio on social media for the latest photography and videography updates." />
             </Head>
 
-            <div className="flex justify-center items-center gap-1 py-10 lg:gap-4">
+            <div className="flex justify-center items-center gap-0.5 py-10 lg:gap-4">
                 {socialLinks.map(({ id, icon, name, url, color }) => (
                     <a
                         key={id}

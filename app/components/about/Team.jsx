@@ -1,27 +1,28 @@
 "use client";
 
+import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 
 const teamMembers = [
     {
-        name: "KHAN SAHEB",
-        role: "HR, LATO",
-        image: "/img/team/1.jpg",
-    },
-    {
-        name: "Ali Akbar",
-        role: "HR, PIT",
-        image: "/img/team/1.jpg",
-    },
-    {
-        name: "Sadab Bean",
-        role: "HR, INCA",
-        image: "/img/team/1.jpg",
-    },
-    {
         name: "Mohammad Ahmad",
+        role: "HR, LATO",
+        image: "IMG_0934_s8cuij",
+    },
+    {
+        name: "Ali",
+        role: "HR, PIT",
+        image: "rizwan_lxcwlv",
+    },
+    {
+        name: "Rizwan Ullah",
         role: "HR, INCA",
-        image: "/img/team/1.jpg",
+        image: "rizwan_lxcwlv",
+    },
+    {
+        name: "Sultan Ahmad",
+        role: "HR, INCA",
+        image: "IMG_0934_s8cuij",
     },
 ];
 
@@ -36,14 +37,14 @@ export default function TeamSection() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-3 ">
                     {teamMembers.map((member, index) => (
                         <div key={index} className="group relative p-6 my-7 lg:my-2">
-                            <Image
+                            <CldImage
                                 src={member.image}
                                 alt={`${member.name} - ${member.role}`}
-                                width={400}
+                                width={450}
                                 height={400}
-                                className="w-full h-auto mx-auto rounded-lg shadow-md"
+                                className="w-full h-auto mx-auto rounded-lg shadow-md object-cover"
                             />
-                            <div className="absolute -bottom-12 rounded left-1/2 transform -translate-x-1/2 p-5 w-[80%] bg-white shadow-xl text-center overflow-hidden z-10 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+                            <div className="absolute -bottom-12 rounded left-1/2 transform -translate-x-1/2 p-5 w-[80%] bg-white shadow-xl text-center overflow-hidden z-10 group-hover:bg-amber-400 group-hover:text-white transition-all duration-300">
                                 <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
                                 <p className="text-[17px] opacity-80">{member.role}</p>
                             </div>

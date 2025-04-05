@@ -7,6 +7,7 @@ import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
 import clients from './clients';
 import BgTestimonials from './bg';
+import { CldImage } from 'next-cloudinary';
 
 const Testimonials = () => {
     return (
@@ -29,7 +30,7 @@ const Testimonials = () => {
                             <div className='md:grid md:grid-cols-2 md:gap-10 lg:gap-16 md:items-center'>
                                 <div className='hidden md:block mb-24 md:mb-0 sm:px-6'>
                                     <div className='relative'>
-                                        <img className='rounded-xl' src={client.avatar} alt='Avatar' />
+                                        <CldImage className='rounded-xl' width={400} height={600} src={client.avatar} alt='javed studio reviews' />
                                         <BgTestimonials />
                                     </div>
                                 </div>
@@ -46,7 +47,7 @@ const Testimonials = () => {
                                             <div className='flex items-center'>
                                                 <div className='md:hidden shrink-0'>
                                                     {/* <img className='size-12 rounded-full' src={client.avatar} alt='Avatar' /> */}
-                                                    <img className="size-14 rounded-full object-cover" src={client.avatar} alt="Javed studio client" />
+                                                    <CldImage width={400} height={400} className="size-14 rounded-full object-cover" src={client.avatar} alt="Javed studio client" />
                                                 </div>
                                                 <div className='ms-4 md:ms-0'>
                                                     <div className='text-base font-semibold text-gray-800'>{client.name}</div>

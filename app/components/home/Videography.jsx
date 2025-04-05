@@ -20,7 +20,7 @@ const Videography = () => {
                 <div className="mt-10 relative max-w-5xl mx-auto">
                     {!isPlaying ? (
                         <div
-                            className="w-full object-cover h-96 sm:h-120 bg-[url('/img/slider/1.jpg?auto=format&fit=crop&w=1600&q=80')] bg-no-repeat bg-center bg-cover rounded-xl flex items-center justify-center cursor-pointer"
+                            className="w-full object-cover h-96 sm:h-120 bg-[url('https://res.cloudinary.com/dgjrgkaop/image/upload/v1743778303/1_pbqgjh.jpg?auto=format&fit=crop&w=1600&q=80')] bg-no-repeat bg-center bg-cover rounded-xl flex items-center justify-center cursor-pointer"
                             onClick={() => setIsPlaying(true)}
                         >
                             <button className="py-3 px-4 flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50">

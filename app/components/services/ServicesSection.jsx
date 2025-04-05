@@ -32,13 +32,20 @@ export default function ServicesSection() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-6xl mx-auto">
                 {services.map((service, index) => (
-                    <div key={index} className="flex flex-col lg:w-full w-[85%] mx-auto items-center bg-white p-6 shadow-lg rounded-lg transition transform hover:scale-105">
-                        <div className="w-16 h-16 flex items-center justify-center bg-amber-400 text-white rounded-full border-4 border-amber-300 shadow-md">
-                            <FontAwesomeIcon icon={service.icon} size="2x" />
+                    <div key={index} className="group flex flex-col lg:w-full w-[85%] mx-auto items-center p-6 rounded-lg transition transform hover:scale-105 group-hover:text-orange-400 group-hover:bg-amber-50">
+                        <div className="w-16 h-16 flex items-center justify-center bg-amber-400 text-white rounded-full border-4 border-orange-400 p-3 shadow-md transition-all group-hover:bg-white duration-500">
+                            <FontAwesomeIcon
+                                icon={service.icon}
+                                size="2x"
+                                className="group-hover:text-orange-400 text-white transition-all duration-500"
+                            />
                         </div>
-                        <h5 className="text-lg font-semibold text-gray-800 mt-4">{service.title}</h5>
+                        <h5 className="text-lg font-semibold text-gray-800 mt-4">
+                            {service.title}
+                        </h5>
                     </div>
                 ))}
+
             </div>
         </section>
     );
