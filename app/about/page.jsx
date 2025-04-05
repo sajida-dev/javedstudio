@@ -1,5 +1,4 @@
 import React from 'react'
-import WhyUs from '../components/about/WhyUs'
 import Memories from '../components/about/Memories'
 import CEO from '../components/about/CEO'
 import SeparatingSection from '../components/about/SeparatingSection'
