@@ -22,10 +22,10 @@ export const metadata = {
         image: "https://res.cloudinary.com/dgjrgkaop/image/upload/q_auto,f_auto,c_fill/v1743778303/1_pbqgjh.jpg"
     },
     facebook: {
-        appId: "61564252206804",  // Optional: If you are integrating with Facebook
+        appId: "61564252206804",  // Optional: 
     },
     instagram: {
-        handle: "@javedstudio",  // Your Instagram handle
+        handle: "@javedstudio",
     },
     keywords: ["wedding photography", "wedding videography", "professional photographer", "event photography", "couple photography", "drone videography"],
     robots: "index, follow",
