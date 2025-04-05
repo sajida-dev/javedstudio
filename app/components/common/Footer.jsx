@@ -65,7 +65,7 @@ const Footer = ({ logo, address }) => {
                     <a href="https://www.youtube.com/channel/UCQl2fpUV6Eq0Wv2OgkEQ_AA" className="hover:text-amber-600" aria-label="YouTube">
                         <FontAwesomeIcon icon={faYoutube} className="text-gray-500 hover:text-amber-600 text-lg" />
                     </a>
-                    <a href="https://tiktok.com" className="hover:text-amber-600" aria-label="TikTok">
+                    <a href="https://www.tiktok.com/@javedstudio807" className="hover:text-amber-600" aria-label="TikTok">
                         <FontAwesomeIcon icon={faTiktok} className="text-gray-500 hover:text-amber-600 text-lg" />
                     </a>
                     <a href="mailto:info@javedstudio.com" className="hover:text-amber-600" aria-label="Email">

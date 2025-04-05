@@ -1,5 +1,6 @@
 
 export const productGallery = [
+    "cld-sample-5",
     "3_jpfud9",
     "1_yfjvjb",
     "5_yms2k7",
