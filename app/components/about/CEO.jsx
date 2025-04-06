@@ -26,7 +26,7 @@ const CEO = () => {
                                     <h3 className="text-amber-500 text-3xl font-bold leading-normal lg:text-start text-center">
                                         About Javed Iqbal, Founder of Javed Studio</h3>
                                     <p className="text-gray-700 text-lg font-normal leading-relaxed lg:text-start text-center mt-4 mb-6">
-                                        Javed Iqbal is the founder of Javed Studio and has more than 10 years of experience in photography and videography. His passion for capturing special moments started early, and he has worked hard to turn this passion into a successful business.
+                                        Javed Iqbal is the founder of Javed Studio and has more than 25+ years of experience in photography and videography. His passion for capturing special moments started early, and he has worked hard to turn this passion into a successful business.
                                     </p>
                                     <p className="text-gray-700 text-lg font-normal leading-relaxed lg:text-start text-center mb-6">
                                         With his creative eye and attention to detail, Javed has become known for capturing beautiful, meaningful moments. Whether it's a wedding, a family celebration, or a special event, Javed always aims to tell a story through his photos and videos.
