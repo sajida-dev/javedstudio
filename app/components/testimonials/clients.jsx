@@ -24,7 +24,7 @@ const clients = [
         testimonial: "To say that switching to Preline has been life-changing is an understatement. My business has tripled and I got my life back.",
     },
     {
-        name: "Nicole Grazioso",
+        name: "Daka Grazioso",
         position: "Director Payments & Risk | Airbnb",
         avatar: "DSC_9584_mkmw2u",
         testimonial: "To say that switching to Preline has been life-changing is an understatement. My business has tripled and I got my life back.",
