@@ -28,7 +28,7 @@ const reasons = [
 
 const WhyChooseUs = () => {
     return (
-        <section className="mb-10 bg-white">
+        <section className="mb-10 bg-gray-50">
             <AboutTopHeading />
             <div className="container mx-auto px-5 lg:mt-10 md:mt-7 mt-1">
                 <h2 className="text-center text-4xl font-bold">Why Choose Javed Studio?</h2>
@@ -45,7 +45,7 @@ const WhyChooseUs = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
                     {reasons.map((reason, index) => (
                         <div key={index} className="group flex flex-col items-center p-6 text-center transition-all duration-300 hover:shadow-lg group-hover:bg-white group-hover:text-amber-300">
-                            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-amber-400 border-4 border-orange-500 text-white transition-all group-hover:bg-white duration-500">
+                            <div className="w-20 h-20 flex items-center justify-center rounded-full bg-gray-50 border-4 border-gray-50 text-orange-400 transition-all group-hover:border-orange-500 duration-500">
                                 <FontAwesomeIcon
                                     icon={reason.icon}
                                     className="text-3xl group-hover:text-orange-500 transition-all duration-500"

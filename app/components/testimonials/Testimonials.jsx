@@ -24,8 +24,8 @@ const Testimonials = () => {
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 className='w-full'
             >
-                {clients.map((client) => (
-                    <SwiperSlide key={client.id}>
+                {clients.map((client, index) => (
+                    <SwiperSlide key={index}>
                         <div className='max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto'>
                             <div className='md:grid md:grid-cols-2 md:gap-10 lg:gap-16 md:items-center'>
                                 <div className='hidden md:block mb-24 md:mb-0 sm:px-6'>

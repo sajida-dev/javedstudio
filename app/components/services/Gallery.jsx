@@ -25,7 +25,7 @@ const Gallery = ({ page, paragraph, images }) => {
                                 className="block mx-auto w-auto h-auto min-w-[270px] min-h-[200px] max-w-full rounded-lg cursor-pointer object-cover transition-transform duration-300 hover:scale-105"
                             />
                         </Zoom>
-                    ))};
+                    ))}
 
                 </div>
             </div>
