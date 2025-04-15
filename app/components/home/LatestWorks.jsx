@@ -6,8 +6,7 @@ import { motion } from "framer-motion";
 import { CldImage } from 'next-cloudinary';
 
 const images = [
-    "14_iznicr", "19_rgjbzg", "13_ajhgxz", "16_dhvrll", "11_fc141n",
-    "15_emxie9", "12_exmgiv", "8_fbnkl1", "10_am1l89", "5_jwnhdr", "1_o3jn6i",
+    "1744696531447_u1sqdl", "principal-uoe_wxqirt", "14_iznicr", "19_rgjbzg", "1744697024064_uzs8ee", "13_ajhgxz", "16_dhvrll", "1744696757111_o9qzlz", "11_fc141n", "1743736223915_kvimtw", "15_emxie9", "12_exmgiv", "8_fbnkl1", "10_am1l89", "5_jwnhdr", "1_o3jn6i", "FB_IMG_1742479714516_jj8ytu", "1744021120223_c8k0bw"
 ];
 
 export default function LatestWorks() {
