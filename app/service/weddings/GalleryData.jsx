@@ -1,8 +1,8 @@
 // image id's of cloudinary images
 
 export const weddingGallery = [
-    "FB_IMG_1742479739431_sdkufe",
-    "FB_IMG_1742479723109_cxfcbo",
+    "FB_IMG_1742479739431_sdkufe","DSC_9353_zxtrsw","DSC_9371_euxayc","DSC_9349_vfqvww","DSC_9380_mhjk75","DSC_9352_rea2xv",
+    "FB_IMG_1742479723109_cxfcbo","DSC_9386_rbzqcx","DSC_9354_gvgjdw","DSC_9372_bny962",
     "FB_IMG_1742479733444_eb5lhp",
     "FB_IMG_1742479726567_nh1d8l",
     "FB_IMG_1742479736590_z2qcl7",
